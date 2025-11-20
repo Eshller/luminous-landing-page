@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import mainLogo from "@/assets/adzzat-logo.svg";
+import mainLogo from "@/assets/adzzat-logo.jpeg";
 
 interface NavbarProps {
   onContactClick: () => void;
