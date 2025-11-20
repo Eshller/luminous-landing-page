@@ -10,11 +10,14 @@ export const CollegeLogosSection = () => {
   return (
     <section className="py-24 px-4 bg-white relative overflow-hidden">
       <div className="container mx-auto mb-16 text-center">
+        <div className="inline-block px-6 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
+          <span className="text-sm font-semibold">Our Network</span>
+        </div>
         <h2 className="text-5xl md:text-6xl font-bold mb-6">
-          <span className="gradient-text">Trusted By Leading Institutions</span>
+          <span className="gradient-text">Talent from Top Institutions</span>
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Join hundreds of colleges and universities already using our platform
+          Our professionals come from IITs, NITs, IIITs, and leading research institutions
         </p>
       </div>
 
