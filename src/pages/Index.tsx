@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Navbar } from "@/components/landing/Navbar";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { FeaturesSection } from "@/components/landing/FeaturesSection";
@@ -9,11 +10,14 @@ import { CollegeLogosSection } from "@/components/landing/CollegeLogosSection";
 import { FAQSection } from "@/components/landing/FAQSection";
 import { ContactSection } from "@/components/landing/ContactSection";
 import { Footer } from "@/components/landing/Footer";
+import { ContactModal } from "@/components/ContactModal";
 
 const Index = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   return (
     <main className="overflow-x-hidden">
-      <Navbar />
+      <Navbar onContactClick={() => setIsContactModalOpen(true)} />
       <HeroSection />
       <FeaturesSection />
       <ExpertiseSection />
@@ -21,9 +25,13 @@ const Index = () => {
       <MetricsSection />
       <BenefitsSection />
       <CollegeLogosSection />
-      <FAQSection />
+      <FAQSection onContactClick={() => setIsContactModalOpen(true)} />
       <ContactSection />
-      <Footer />
+      <Footer onContactClick={() => setIsContactModalOpen(true)} />
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </main>
   );
 };

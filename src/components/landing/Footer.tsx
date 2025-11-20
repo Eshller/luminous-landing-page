@@ -3,7 +3,11 @@ import { useInView } from "react-intersection-observer";
 import { Linkedin, Instagram } from "lucide-react";
 import adzzatLogo from "@/assets/adzzat-logo.svg";
 
-export const Footer = () => {
+interface FooterProps {
+  onContactClick: () => void;
+}
+
+export const Footer = ({ onContactClick }: FooterProps) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -22,12 +26,12 @@ export const Footer = () => {
   };
 
   const quickLinks = [
-    { label: "Services", id: "services" },
-    { label: "Expertise", id: "expertise" },
-    { label: "How It Works", id: "how-it-works" },
-    { label: "For Talent", id: "benefits" },
-    { label: "FAQ", id: "faq" },
-    { label: "Contact", id: "contact" },
+    { label: "Services", id: "services", isModal: false },
+    { label: "Expertise", id: "expertise", isModal: false },
+    { label: "How It Works", id: "how-it-works", isModal: false },
+    { label: "For Talent", id: "benefits", isModal: false },
+    { label: "FAQ", id: "faq", isModal: false },
+    { label: "Contact", id: "contact", isModal: true },
   ];
 
   return (
@@ -75,7 +79,7 @@ export const Footer = () => {
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <button
-                    onClick={() => scrollToSection(link.id)}
+                    onClick={() => link.isModal ? onContactClick() : scrollToSection(link.id)}
                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
