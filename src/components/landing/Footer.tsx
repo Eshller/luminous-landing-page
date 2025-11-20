@@ -1,0 +1,93 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+
+export const Footer = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const socialLinks = [
+    { icon: Facebook, href: "#" },
+    { icon: Twitter, href: "#" },
+    { icon: Linkedin, href: "#" },
+    { icon: Instagram, href: "#" },
+  ];
+
+  return (
+    <footer ref={ref} className="bg-gradient-to-b from-white to-secondary py-16 px-4">
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="grid md:grid-cols-4 gap-12 mb-12"
+        >
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-light to-primary rounded-2xl flex items-center justify-center mb-4 animate-pulse-glow">
+              <div className="text-white text-2xl font-bold">L</div>
+            </div>
+            <p className="text-muted-foreground mb-4">
+              Empowering education through innovative technology solutions.
+              Building the future, one student at a time.
+            </p>
+            <div className="flex gap-4">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.href}
+                  whileHover={{ scale: 1.2, y: -3 }}
+                  className="w-10 h-10 rounded-xl bg-white shadow-medium hover:shadow-strong flex items-center justify-center text-primary transition-all duration-300"
+                >
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {["About Us", "Features", "Pricing", "Contact"].map((link, index) => (
+                <li key={index}>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {["Documentation", "Support", "Blog", "Community"].map((link, index) => (
+                <li key={index}>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+
+        {/* Bottom Bar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="pt-8 border-t border-border text-center"
+        >
+          <p className="text-muted-foreground">
+            © {new Date().getFullYear()} Your Company. All rights reserved.
+          </p>
+        </motion.div>
+      </div>
+    </footer>
+  );
+};
