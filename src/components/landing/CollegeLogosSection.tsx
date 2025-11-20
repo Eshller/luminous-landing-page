@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 
 export const CollegeLogosSection = () => {
-  // TODO: Replace these placeholder logos with your actual college logos
-  const logos = Array(10).fill(null).map((_, i) => ({
-    id: i,
-    name: `College ${i + 1}`,
+  // College logos I1-I29 (excluding I3 as it doesn't exist)
+  const collegeNumbers = [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29];
+
+  const logos = collegeNumbers.map((num) => ({
+    id: num,
+    name: `Institution ${num}`,
+    image: `/assets/colleges/I${num}.png`,
   }));
 
   return (
@@ -29,12 +32,24 @@ export const CollegeLogosSection = () => {
               <motion.div
                 key={`layer1-${index}`}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className="flex-shrink-0 w-48 h-24 glass rounded-2xl flex items-center justify-center shadow-medium hover:shadow-strong transition-all duration-300"
+                className="flex-shrink-0 w-48 h-24 glass rounded-2xl flex items-center justify-center shadow-medium hover:shadow-strong transition-all duration-300 p-4 bg-white"
               >
-                {/* TODO: Replace with actual logo image */}
-                <div className="text-primary font-bold text-lg">
-                  {logo.name}
-                </div>
+                <img
+                  src={logo.image}
+                  alt={logo.name}
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => {
+                    // Fallback to text if image doesn't load
+                    e.currentTarget.style.display = 'none';
+                    const parent = e.currentTarget.parentElement;
+                    if (parent && !parent.querySelector('.fallback-text')) {
+                      const fallback = document.createElement('div');
+                      fallback.className = 'fallback-text text-primary font-bold text-lg';
+                      fallback.textContent = logo.name;
+                      parent.appendChild(fallback);
+                    }
+                  }}
+                />
               </motion.div>
             ))}
           </div>
@@ -54,12 +69,24 @@ export const CollegeLogosSection = () => {
               <motion.div
                 key={`layer2-${index}`}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className="flex-shrink-0 w-48 h-24 glass rounded-2xl flex items-center justify-center shadow-medium hover:shadow-strong transition-all duration-300 opacity-80"
+                className="flex-shrink-0 w-48 h-24 glass rounded-2xl flex items-center justify-center shadow-medium hover:shadow-strong transition-all duration-300 opacity-80 p-4 bg-white"
               >
-                {/* TODO: Replace with actual logo image */}
-                <div className="text-primary font-bold text-lg">
-                  {logo.name}
-                </div>
+                <img
+                  src={logo.image}
+                  alt={logo.name}
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => {
+                    // Fallback to text if image doesn't load
+                    e.currentTarget.style.display = 'none';
+                    const parent = e.currentTarget.parentElement;
+                    if (parent && !parent.querySelector('.fallback-text')) {
+                      const fallback = document.createElement('div');
+                      fallback.className = 'fallback-text text-primary font-bold text-lg';
+                      fallback.textContent = logo.name;
+                      parent.appendChild(fallback);
+                    }
+                  }}
+                />
               </motion.div>
             ))}
           </div>
