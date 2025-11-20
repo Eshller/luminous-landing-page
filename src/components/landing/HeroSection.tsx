@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FloatingOrbs } from "./FloatingOrbs";
+import mainLogo from "@/assets/main-logo.svg";
 
 export const HeroSection = () => {
   return (
@@ -13,16 +14,19 @@ export const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-5xl mx-auto"
         >
-          {/* Main Logo - Upload your logo here */}
+          {/* Main Logo */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-8"
           >
-            <div className="w-48 h-48 mx-auto bg-white rounded-3xl shadow-strong flex items-center justify-center mb-6 animate-pulse-glow">
-              {/* TODO: Replace with your main logo */}
-              <div className="text-primary text-6xl font-bold">LOGO</div>
+            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto flex items-center justify-center mb-6">
+              <img 
+                src={mainLogo} 
+                alt="Company Logo" 
+                className="w-full h-full object-contain drop-shadow-2xl animate-pulse-glow"
+              />
             </div>
           </motion.div>
 
