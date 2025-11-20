@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import adzzatLogo from "@/assets/adzzat-logo.svg";
 
 export const Footer = () => {
   const [ref, inView] = useInView({
@@ -26,12 +27,16 @@ export const Footer = () => {
         >
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary-light to-primary rounded-2xl flex items-center justify-center mb-4 animate-pulse-glow">
-              <div className="text-white text-2xl font-bold">L</div>
+            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-4 shadow-medium p-2">
+              <img
+                src={adzzatLogo}
+                alt="Adzzat Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <p className="text-muted-foreground mb-4">
-              Empowering education through innovative technology solutions.
-              Building the future, one student at a time.
+              The only platform combining a vetted talent marketplace with enterprise-grade
+              LLM evaluation and dataset services. Scale your AI operations with confidence.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -84,7 +89,7 @@ export const Footer = () => {
           className="pt-8 border-t border-border text-center"
         >
           <p className="text-muted-foreground">
-            © {new Date().getFullYear()} Your Company. All rights reserved.
+            © {new Date().getFullYear()} Adzzat. All rights reserved.
           </p>
         </motion.div>
       </div>
