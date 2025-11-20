@@ -5,20 +5,32 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "How do you vet your talent?",
-    answer: "We have a rigorous 3-step process: Technical assessment, Domain expertise interview, and a Trial project. Only top 1% of applicants from institutes like IITs and NITs make the cut.",
+    question: "What makes Adzzat different?",
+    answer: "We provide freelancers who are trained AI engineers. We handle recruiting, training, QA, and delivery end-to-end.",
   },
   {
-    question: "Can we hire for short-term projects?",
-    answer: "Yes! Adzzat is designed for flexibility. You can hire talent for a 2-week annotation sprint or a 6-month long LLM evaluation project.",
+    question: "What kind of talent do you offer?",
+    answer: "We work with vetted engineers, evaluators, and data specialists from top Indian institutes like IITs, NITs, and IIITs.",
   },
   {
-    question: "How does the pricing model work?",
-    answer: "We offer transparent hourly rates or fixed-price task-based billing depending on the nature of your project. No hidden platform fees.",
+    question: "How do you ensure quality?",
+    answer: "Every task goes through structured training, evaluation, QA checks, and ongoing performance monitoring.",
   },
   {
-    question: "Do you sign NDAs?",
-    answer: "Absolutely. Data security is our priority. All talent signs strict NDAs, and we are happy to sign an enterprise-level NDA with your organization.",
+    question: "Can you handle specialized or technical workflows?",
+    answer: "Absolutely. We support LLM evals, agent testing, coding tasks, dataset creation, and domain-specific workflows.",
+  },
+  {
+    question: "How quickly can we get started?",
+    answer: "Most teams are ready in under a week, depending on scale and workflow complexity.",
+  },
+  {
+    question: "Do we need to manage the team?",
+    answer: "No — we fully manage recruiting, training, operations, and quality so you only focus on results.",
+  },
+  {
+    question: "How does pricing work?",
+    answer: "Flexible pricing: hourly, per-task, or dedicated team — all inclusive of management and QA.",
   },
 ];
 
