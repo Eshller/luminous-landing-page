@@ -44,7 +44,7 @@ export const HowItWorksSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   return (
-    <section id="how-it-works" ref={sectionRef} className="py-24 px-4 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
+    <section id="how-it-works" ref={sectionRef} className="py-16 md:py-24 px-4 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
       {/* Animated 3D background grid */}
       <motion.div 
         className="absolute inset-0 opacity-10"
@@ -63,7 +63,7 @@ export const HowItWorksSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
           style={{ opacity }}
         >
           <motion.div

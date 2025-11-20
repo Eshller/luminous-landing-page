@@ -11,7 +11,7 @@ export const CollegeLogosSection = () => {
   }));
 
   return (
-    <section className="py-24 px-4 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 bg-white relative overflow-hidden">
       <div className="container mx-auto mb-16 text-center">
         <div className="inline-block px-6 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
           <span className="text-sm font-semibold">Our Network</span>
