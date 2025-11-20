@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Linkedin, Instagram } from "lucide-react";
-import adzzatLogo from "@/assets/adzzat-logo.jpeg";
+import adzzatLogo from "@/assets/adzzat-nav-bar.png";
 
 interface FooterProps {
   onContactClick: () => void;
