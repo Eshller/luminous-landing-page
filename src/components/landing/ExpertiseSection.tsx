@@ -90,41 +90,37 @@ export const ExpertiseSection = () => {
             >
               <motion.div
                 whileHover={{
-                  scale: 1.03,
-                  rotateY: 2,
-                  z: 30,
+                  scale: 1.02,
+                  y: -5,
                 }}
-                transition={{ duration: 0.4 }}
-                className="glass rounded-2xl p-8 shadow-medium hover:shadow-strong transition-all duration-300 relative overflow-hidden h-full min-h-[200px] flex flex-col"
+                transition={{ duration: 0.3 }}
+                className="bg-white border border-gray-200/60 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden h-full min-h-[220px] flex flex-col"
                 style={{
                   transformStyle: 'preserve-3d',
                 }}
               >
-                {/* Animated background glow */}
+                {/* Premium gradient overlay on hover */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl -z-10"
-                  animate={hoveredIndex === index ? {
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 180, 360],
-                  } : {}}
-                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
 
-                {/* 3D Icon Container */}
+                {/* Subtle border glow on hover */}
+                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/15 via-transparent to-accent/15 -z-10 blur-2xl" />
+
+                {/* Premium Icon Container */}
                 <motion.div
-                  className="w-14 h-14 bg-gradient-to-br from-primary-light to-primary rounded-xl flex items-center justify-center mb-4 relative z-10"
+                  className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-md group-hover:shadow-lg transition-all duration-300"
                   animate={hoveredIndex === index ? {
-                    rotateY: [0, 360],
-                    scale: [1, 1.15, 1],
+                    y: [-2, 2, -2],
                   } : {}}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
                   style={{ transformStyle: 'preserve-3d' }}
                 >
-                  <area.icon className="w-7 h-7 text-white" />
+                  <area.icon className="w-8 h-8 text-white" />
                 </motion.div>
 
                 {/* Title - Always visible */}
-                <h3 className="text-2xl font-bold mb-3 relative z-10 text-foreground">
+                <h3 className="text-xl font-bold mb-3 relative z-10 text-gray-900 group-hover:text-primary transition-colors duration-300">
                   {area.title}
                 </h3>
 
@@ -138,7 +134,7 @@ export const ExpertiseSection = () => {
                       transition={{ duration: 0.3 }}
                       className="relative z-10 flex-grow"
                     >
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed text-sm">
                         {area.description}
                       </p>
                     </motion.div>
@@ -155,7 +151,7 @@ export const ExpertiseSection = () => {
                       transition={{ duration: 0.2 }}
                       className="absolute bottom-6 left-8 right-8 z-10"
                     >
-                      <p className="text-sm text-muted-foreground/60 italic">
+                      <p className="text-xs text-gray-400 italic">
                         Hover to learn more
                       </p>
                     </motion.div>
