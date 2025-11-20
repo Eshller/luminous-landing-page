@@ -22,7 +22,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-white relative overflow-hidden">
+    <section id="contact" ref={ref} className="py-24 px-4 bg-white relative overflow-hidden">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

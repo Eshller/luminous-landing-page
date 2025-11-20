@@ -35,7 +35,7 @@ export const BenefitsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
+    <section id="benefits" ref={ref} className="py-24 px-4 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

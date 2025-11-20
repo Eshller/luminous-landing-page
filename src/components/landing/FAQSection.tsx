@@ -31,7 +31,7 @@ export const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section ref={ref} className="py-24 px-4 relative overflow-hidden">
+    <section id="faq" ref={ref} className="py-24 px-4 relative overflow-hidden">
       <div className="container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

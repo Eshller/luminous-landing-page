@@ -44,7 +44,7 @@ export const HowItWorksSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
+    <section id="how-it-works" ref={sectionRef} className="py-24 px-4 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
       {/* Animated 3D background grid */}
       <motion.div 
         className="absolute inset-0 opacity-10"
