@@ -76,39 +76,40 @@ export const BenefitsSection = () => {
                 z: 50,
                 transition: { duration: 0.3 }
               }}
-              className="glass rounded-2xl p-8 shadow-medium hover:shadow-strong transition-all duration-300 group relative"
+              className="bg-white border border-gray-200/60 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 group relative overflow-hidden"
               style={{
                 transformStyle: 'preserve-3d',
                 transform: hoveredIndex === index ? 'translateZ(20px)' : 'translateZ(0)',
               }}
             >
-              {/* Animated background glow */}
+              {/* Premium gradient background on hover */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl -z-10"
+                className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/10 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 animate={hoveredIndex === index ? {
-                  scale: [1, 1.2, 1],
-                  rotate: [0, 180, 360],
+                  scale: [1, 1.05, 1],
                 } : {}}
-                transition={{ duration: 3, repeat: Infinity }}
+                transition={{ duration: 2, repeat: Infinity }}
               />
 
-              {/* 3D Icon Container */}
+              {/* Border accent on hover */}
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 -z-10 blur-xl" />
+
+              {/* Premium Icon Container */}
               <motion.div
-                className="w-16 h-16 bg-gradient-to-br from-primary-light to-primary rounded-2xl flex items-center justify-center mb-6 relative z-10"
+                className="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-lg group-hover:shadow-xl transition-shadow duration-300"
                 animate={hoveredIndex === index ? {
-                  rotateY: [0, 360],
-                  scale: [1, 1.2, 1],
+                  y: [-2, 2, -2],
                 } : {}}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 1.5, repeat: Infinity }}
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <benefit.icon className="w-8 h-8 text-white" />
+                <benefit.icon className="w-10 h-10 text-white" />
               </motion.div>
 
-              <h3 className="text-2xl font-bold mb-4 relative z-10 text-foreground">
+              <h3 className="text-2xl font-bold mb-4 relative z-10 text-gray-900 group-hover:text-primary transition-colors duration-300">
                 {benefit.title}
               </h3>
-              <p className="text-muted-foreground relative z-10">
+              <p className="text-gray-600 relative z-10 leading-relaxed text-base">
                 {benefit.description}
               </p>
 
