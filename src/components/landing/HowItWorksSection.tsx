@@ -6,23 +6,23 @@ import { useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Sign Up",
-    description: "Create your account in seconds and join thousands of satisfied users.",
+    title: "Share Your Requirements",
+    description: "Tell us about your project needs, timeline, and the specific skills or datasets required.",
   },
   {
     number: "02",
-    title: "Customize",
-    description: "Tailor the platform to your specific needs with our intuitive tools.",
+    title: "AI-Matching & Curating",
+    description: "Our algorithm matches you with the top 1% of domain experts from our pool of 500+ professionals.",
   },
   {
     number: "03",
-    title: "Launch",
-    description: "Deploy your solution and start seeing results immediately.",
+    title: "Kickoff & Execution",
+    description: "Work begins immediately with seamless integration into your existing workflows (Slack, Jira, GitHub).",
   },
   {
     number: "04",
-    title: "Grow",
-    description: "Scale effortlessly as your needs expand with our flexible platform.",
+    title: "Quality Assurance",
+    description: "Rigorous multi-layer QA process ensures every deliverable meets production standards.",
   },
 ];
 
@@ -66,8 +66,16 @@ export const HowItWorksSection = () => {
           className="text-center mb-20"
           style={{ opacity }}
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="inline-block px-6 py-2 bg-white/10 border border-white/20 rounded-full mb-4"
+          >
+            <span className="text-sm font-semibold text-white">Process</span>
+          </motion.div>
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">How It Works</span>
+            How We <span className="gradient-text">Deliver Excellence</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Get started in four simple steps and transform your workflow

@@ -9,10 +9,10 @@ interface Metric {
 }
 
 const metrics: Metric[] = [
-  { target: 500, suffix: "+", label: "Partner Institutions" },
-  { target: 50000, suffix: "+", label: "Active Students" },
-  { target: 98, suffix: "%", label: "Satisfaction Rate" },
-  { target: 24, suffix: "/7", label: "Support Available" },
+  { target: 1000, suffix: "K+", label: "Tasks Completed" },
+  { target: 500, suffix: "+", label: "AI Professionals" },
+  { target: 53, suffix: "K+", label: "PhDs Collaborating" },
+  { target: 150, suffix: "+", label: "Countries Served" },
 ];
 
 const CounterAnimation = ({ target, suffix, inView }: { target: number; suffix: string; inView: boolean }) => {
@@ -43,6 +43,14 @@ const CounterAnimation = ({ target, suffix, inView }: { target: number; suffix: 
     return () => clearInterval(timer);
   }, [target, inView]);
 
+  // Format number for display
+  const formatCount = (num: number, suff: string) => {
+    if (suff === "K+") {
+      return count >= 1000 ? `${(count / 1000).toFixed(0)}K` : count.toString();
+    }
+    return count.toLocaleString();
+  };
+
   return (
     <div className="relative">
       <motion.div
@@ -50,7 +58,7 @@ const CounterAnimation = ({ target, suffix, inView }: { target: number; suffix: 
         animate={showBurst ? { scale: [1, 1.1, 1] } : {}}
         transition={{ duration: 0.5 }}
       >
-        {count.toLocaleString()}{suffix}
+        {formatCount(count, suffix)}{suffix !== "K+" ? suffix : ""}
       </motion.div>
       
       {/* Enhanced burst effect with multiple particles */}
@@ -106,11 +114,19 @@ export const MetricsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="inline-block px-6 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4"
+          >
+            <span className="text-sm font-semibold">Global Impact</span>
+          </motion.div>
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="gradient-text">Our Impact</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Numbers that speak to our commitment and success
+            Trusted by leading AI companies worldwide
           </p>
         </motion.div>
 

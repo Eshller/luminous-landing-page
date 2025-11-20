@@ -30,13 +30,22 @@ export const HeroSection = () => {
             </div>
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="inline-block px-6 py-3 bg-primary/10 border border-primary/20 rounded-full mb-6"
+          >
+            <span className="text-lg">✨ Generative AI for Enterprises</span>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 gradient-text"
           >
-            Transform Your Future
+            Elite Talent Meets<br />Enterprise AI Solutions
           </motion.h1>
 
           <motion.p
@@ -45,8 +54,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto"
           >
-            Empowering students and institutions with innovative solutions for a
-            brighter tomorrow
+            The only platform combining a vetted talent marketplace with enterprise-grade
+            LLM evaluation and dataset services. Scale your AI operations with confidence.
           </motion.p>
 
           <motion.div
@@ -56,10 +65,10 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg shadow-strong hover:shadow-glow hover:scale-105 transition-all duration-300">
-              Get Started
+              Start Building
             </button>
             <button className="px-8 py-4 bg-white text-primary rounded-xl font-semibold text-lg shadow-medium hover:shadow-strong hover:scale-105 transition-all duration-300 border-2 border-primary">
-              Learn More
+              Explore Services
             </button>
           </motion.div>
         </motion.div>
