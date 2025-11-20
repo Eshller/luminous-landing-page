@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Zap, Users, Target, Shield } from "lucide-react";
+import { useState } from "react";
 
 const features = [
   {
@@ -27,9 +28,11 @@ const features = [
 
 export const FeaturesSection = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
+
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section ref={ref} className="py-24 px-4 relative overflow-hidden">
@@ -52,36 +55,101 @@ export const FeaturesSection = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, y: 50, rotateX: -15 }}
+              animate={inView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{
-                y: -10,
-                rotateX: 5,
-                scale: 1.02,
+              onHoverStart={() => setHoveredIndex(index)}
+              onHoverEnd={() => setHoveredIndex(null)}
+              whileHover={{ 
+                scale: 1.05,
+                rotateY: 5,
+                z: 50,
+                transition: { duration: 0.3 }
               }}
-              className="glass rounded-2xl p-8 shadow-medium hover:shadow-strong transition-all duration-300 preserve-3d group"
+              className="glass rounded-2xl p-8 shadow-medium hover:shadow-strong transition-all duration-300 group relative"
+              style={{
+                transformStyle: 'preserve-3d',
+                transform: hoveredIndex === index ? 'translateZ(20px)' : 'translateZ(0)',
+              }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-light to-primary rounded-2xl flex items-center justify-center mb-6 group-hover:animate-pulse-glow transition-all duration-300">
-                <feature.icon className="w-8 h-8 text-white" />
-              </div>
+              {/* Animated background glow */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl -z-10"
+                animate={hoveredIndex === index ? {
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 180, 360],
+                } : {}}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
               
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
+              {/* 3D Icon Container */}
+              <motion.div
+                className="w-16 h-16 bg-gradient-to-br from-primary-light to-primary rounded-2xl flex items-center justify-center mb-6 relative z-10"
+                animate={hoveredIndex === index ? {
+                  rotateY: [0, 360],
+                  scale: [1, 1.2, 1],
+                } : {}}
+                transition={{ duration: 0.6 }}
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <feature.icon className="w-8 h-8 text-white" />
+              </motion.div>
+              
+              <h3 className="text-2xl font-bold mb-4 relative z-10 text-foreground">
                 {feature.title}
               </h3>
-              
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground relative z-10">
                 {feature.description}
               </p>
+              
+              {/* Particle burst effect on hover */}
+              {hoveredIndex === index && (
+                <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl">
+                  {[...Array(8)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-1 h-1 bg-primary rounded-full"
+                      initial={{ 
+                        x: '50%', 
+                        y: '50%',
+                        scale: 0,
+                      }}
+                      animate={{
+                        x: `${50 + (Math.cos(i * Math.PI / 4) * 100)}%`,
+                        y: `${50 + (Math.sin(i * Math.PI / 4) * 100)}%`,
+                        scale: [0, 1, 0],
+                        opacity: [0, 1, 0],
+                      }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        delay: i * 0.1,
+                      }}
+                    />
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary rounded-full blur-3xl animate-pulse" />
-      </div>
+      {/* Enhanced background decoration with 3D effect */}
+      <motion.div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none"
+        animate={{
+          rotateZ: [0, 360],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary rounded-full blur-3xl" />
+      </motion.div>
     </section>
   );
 };
