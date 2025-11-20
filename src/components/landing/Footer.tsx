@@ -45,7 +45,7 @@ export const Footer = ({ onContactClick }: FooterProps) => {
         >
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-4 shadow-medium p-2">
+            <div className="w-[160px] h-[160px] bg-white rounded-2xl flex items-center justify-center mb-4 shadow-medium p-2">
               <img
                 src={adzzatLogo}
                 alt="Adzzat Logo"
