@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import mainLogo from "@/assets/adzzat-nav-bar.jpg";
+import mainLogo from "@/assets/adzzat-nav-bar.png";
 
 interface NavbarProps {
   onContactClick: () => void;
@@ -47,7 +47,7 @@ export const Navbar = ({ onContactClick }: NavbarProps) => {
             <img
               src={mainLogo}
               alt="Adzzat Logo"
-              className="h-12 w-12 object-contain"
+              className="h-16 w-auto object-contain"
             />
           </motion.div>
 
