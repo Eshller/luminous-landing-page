@@ -34,7 +34,11 @@ const faqs = [
   },
 ];
 
-export const FAQSection = () => {
+interface FAQSectionProps {
+  onContactClick?: () => void;
+}
+
+export const FAQSection = ({ onContactClick }: FAQSectionProps) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -136,7 +140,10 @@ export const FAQSection = () => {
           <p className="text-lg text-muted-foreground mb-6">
             Still have questions? We're here to help!
           </p>
-          <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg shadow-strong hover:shadow-glow hover:scale-105 transition-all duration-300">
+          <button
+            onClick={onContactClick}
+            className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg shadow-strong hover:shadow-glow hover:scale-105 transition-all duration-300"
+          >
             Contact Us
           </button>
         </motion.div>

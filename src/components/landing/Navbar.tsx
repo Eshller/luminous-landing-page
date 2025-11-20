@@ -2,7 +2,11 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import mainLogo from "@/assets/adzzat-logo.svg";
 
-export const Navbar = () => {
+interface NavbarProps {
+  onContactClick: () => void;
+}
+
+export const Navbar = ({ onContactClick }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -81,7 +85,7 @@ export const Navbar = () => {
               FAQ
             </button>
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={onContactClick}
               className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-semibold shadow-medium hover:shadow-strong hover:scale-105 transition-all duration-300"
             >
               Contact Us
