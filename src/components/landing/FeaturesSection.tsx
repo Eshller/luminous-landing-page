@@ -35,7 +35,7 @@ export const FeaturesSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section ref={ref} className="py-24 px-4 relative overflow-hidden">
+    <section id="services" ref={ref} className="py-24 px-4 relative overflow-hidden">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
