@@ -53,13 +53,37 @@ const CounterAnimation = ({ target, suffix, inView }: { target: number; suffix: 
         {count.toLocaleString()}{suffix}
       </motion.div>
       
+      {/* Enhanced burst effect with multiple particles */}
       {showBurst && (
-        <motion.div
-          initial={{ scale: 0, opacity: 1 }}
-          animate={{ scale: 2, opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-light to-primary blur-2xl"
-        />
+        <>
+          <motion.div
+            initial={{ scale: 0, opacity: 1 }}
+            animate={{ scale: 2.5, opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-light to-primary blur-2xl"
+          />
+          {[...Array(12)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-3 h-3 bg-primary rounded-full"
+              initial={{ 
+                x: '50%', 
+                y: '50%',
+                scale: 0,
+              }}
+              animate={{
+                x: `${50 + (Math.cos(i * Math.PI / 6) * 150)}%`,
+                y: `${50 + (Math.sin(i * Math.PI / 6) * 150)}%`,
+                scale: [0, 1, 0],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration: 0.8,
+                delay: i * 0.05,
+              }}
+            />
+          ))}
+        </>
       )}
     </div>
   );
@@ -70,6 +94,8 @@ export const MetricsSection = () => {
     triggerOnce: true,
     threshold: 0.3,
   });
+
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section ref={ref} className="py-24 px-4 bg-gradient-to-b from-secondary to-background relative overflow-hidden">
@@ -92,28 +118,73 @@ export const MetricsSection = () => {
           {metrics.map((metric, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              initial={{ opacity: 0, scale: 0.5, rotateY: -45 }}
+              animate={inView ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glass-strong rounded-2xl p-8 text-center shadow-strong hover:shadow-glow transition-all duration-300"
+              onHoverStart={() => setHoveredIndex(index)}
+              onHoverEnd={() => setHoveredIndex(null)}
+              whileHover={{
+                scale: 1.05,
+                rotateY: 5,
+                z: 30,
+              }}
+              className="glass-strong rounded-2xl p-8 text-center shadow-strong hover:shadow-glow transition-all duration-300 relative overflow-hidden"
+              style={{ transformStyle: 'preserve-3d' }}
             >
-              <CounterAnimation
-                target={metric.target}
-                suffix={metric.suffix}
-                inView={inView}
+              {/* Animated background shimmer */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"
+                animate={hoveredIndex === index ? {
+                  x: ['-100%', '200%'],
+                } : {}}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                }}
               />
-              <p className="text-lg text-muted-foreground mt-4 font-semibold">
-                {metric.label}
-              </p>
+              
+              <div className="relative z-10">
+                <CounterAnimation
+                  target={metric.target}
+                  suffix={metric.suffix}
+                  inView={inView}
+                />
+                <p className="text-lg text-muted-foreground mt-4 font-semibold">
+                  {metric.label}
+                </p>
+              </div>
+              
+              {/* Floating particles on hover */}
+              {hoveredIndex === index && (
+                <div className="absolute inset-0 pointer-events-none">
+                  {[...Array(6)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-1 h-1 bg-primary rounded-full"
+                      animate={{
+                        y: ['100%', '-20%'],
+                        x: `${20 + i * 15}%`,
+                        opacity: [0, 1, 0],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        delay: i * 0.2,
+                      }}
+                    />
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Animated background */}
+      {/* Enhanced 3D rotating background */}
       <motion.div
         animate={{
           rotate: [0, 360],
+          scale: [1, 1.2, 1],
         }}
         transition={{
           duration: 30,
@@ -121,6 +192,7 @@ export const MetricsSection = () => {
           ease: "linear",
         }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-20 pointer-events-none"
+        style={{ transformStyle: 'preserve-3d' }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary rounded-full blur-3xl" />
       </motion.div>

@@ -228,6 +228,57 @@ All colors MUST be HSL.
   animation: shimmer 2s infinite;
 }
 
+.animate-3d-spin {
+  animation: spin-3d 10s linear infinite;
+}
+
+.animate-float-3d {
+  animation: float-3d 8s ease-in-out infinite;
+}
+
+.animate-perspective-rotate {
+  animation: perspective-rotate 15s ease-in-out infinite;
+}
+
+@keyframes spin-3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes float-3d {
+  0%, 100% {
+    transform: translateY(0) translateZ(0) rotateX(0deg);
+  }
+  33% {
+    transform: translateY(-20px) translateZ(20px) rotateX(5deg);
+  }
+  66% {
+    transform: translateY(10px) translateZ(-10px) rotateX(-5deg);
+  }
+}
+
+@keyframes perspective-rotate {
+  0%, 100% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(10deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
