@@ -35,13 +35,13 @@ export const BenefitsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="benefits" ref={ref} className="py-24 px-4 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
+    <section id="benefits" ref={ref} className="py-16 md:py-24 px-4 bg-gradient-to-b from-background to-secondary relative overflow-hidden">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

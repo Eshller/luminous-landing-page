@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Workflow, ImagePlus, Code, Database, CheckCircle, BookOpen, ThumbsUp } from "lucide-react";
+import { Workflow, ImagePlus, Code, Database, CheckCircle, ThumbsUp } from "lucide-react";
 import { useState } from "react";
 
 const expertiseAreas = [
@@ -30,11 +30,6 @@ const expertiseAreas = [
     description: "We check how well a model follows instructions, answers accurately, avoids hallucinations, and handles reasoning, safety, and overall usefulness.",
   },
   {
-    icon: BookOpen,
-    title: "RAG (Retrieval-Augmented Generation)",
-    description: "When models rely on external knowledge, we make sure the retrieved information is actually relevant and the final answer stays grounded in facts.",
-  },
-  {
     icon: ThumbsUp,
     title: "RLHF (Human Feedback)",
     description: "We compare model outputs, give feedback, score them, and share preferences — helping the model learn what \"better\" looks like from a human's perspective.",
@@ -50,13 +45,13 @@ export const ExpertiseSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="expertise" ref={ref} className="py-24 px-4 relative overflow-hidden bg-gradient-to-b from-secondary/30 to-background">
+    <section id="expertise" ref={ref} className="py-16 md:py-24 px-4 relative overflow-hidden bg-gradient-to-b from-secondary/30 to-background">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

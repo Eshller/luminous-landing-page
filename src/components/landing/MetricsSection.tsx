@@ -106,13 +106,13 @@ export const MetricsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gradient-to-b from-secondary to-background relative overflow-hidden">
+    <section ref={ref} className="py-16 md:py-24 px-4 bg-gradient-to-b from-secondary to-background relative overflow-hidden">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

@@ -40,13 +40,13 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" ref={ref} className="py-24 px-4 bg-white relative overflow-hidden">
+    <section id="contact" ref={ref} className="py-16 md:py-24 px-4 bg-white relative overflow-hidden">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="gradient-text">Get In Touch</span>
