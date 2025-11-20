@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 import adzzatLogo from "@/assets/adzzat-logo.svg";
 
 export const Footer = () => {
@@ -10,10 +10,24 @@ export const Footer = () => {
   });
 
   const socialLinks = [
-    { icon: Facebook, href: "#" },
-    { icon: Twitter, href: "#" },
-    { icon: Linkedin, href: "#" },
-    { icon: Instagram, href: "#" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/adzzat/posts/?feedView=all" },
+    { icon: Instagram, href: "https://www.instagram.com/adzzat/" },
+  ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const quickLinks = [
+    { label: "Services", id: "services" },
+    { label: "Expertise", id: "expertise" },
+    { label: "How It Works", id: "how-it-works" },
+    { label: "For Talent", id: "benefits" },
+    { label: "FAQ", id: "faq" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
@@ -23,7 +37,7 @@ export const Footer = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-4 gap-12 mb-12"
+          className="grid md:grid-cols-3 gap-12 mb-12"
         >
           {/* Brand */}
           <div className="md:col-span-2">
@@ -43,6 +57,8 @@ export const Footer = () => {
                 <motion.a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -3 }}
                   className="w-10 h-10 rounded-xl bg-white shadow-medium hover:shadow-strong flex items-center justify-center text-primary transition-all duration-300"
                 >
@@ -56,25 +72,14 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {["About Us", "Features", "Pricing", "Contact"].map((link, index) => (
+              {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {["Documentation", "Support", "Blog", "Community"].map((link, index) => (
-                <li key={index}>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                    {link}
-                  </a>
+                  <button
+                    onClick={() => scrollToSection(link.id)}
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    {link.label}
+                  </button>
                 </li>
               ))}
             </ul>

@@ -57,6 +57,12 @@ export const Navbar = () => {
               Services
             </button>
             <button
+              onClick={() => scrollToSection("expertise")}
+              className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+            >
+              Expertise
+            </button>
+            <button
               onClick={() => scrollToSection("how-it-works")}
               className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
             >
