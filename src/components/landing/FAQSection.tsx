@@ -81,13 +81,13 @@ export const FAQSection = ({ onContactClick }: FAQSectionProps) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border border-gray-200/60 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                className="glass rounded-2xl overflow-hidden shadow-medium hover:shadow-strong transition-all duration-300"
               >
                 <button
                   onClick={() => setActiveIndex(isActive ? null : index)}
-                  className="w-full px-8 py-7 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200 group"
+                  className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-primary/5 transition-colors duration-200"
                 >
-                  <h3 className="text-lg font-semibold pr-8 text-gray-900 group-hover:text-primary transition-colors duration-200">
+                  <h3 className="text-xl font-semibold pr-8">
                     {faq.question}
                   </h3>
                   <motion.div
@@ -108,20 +108,20 @@ export const FAQSection = ({ onContactClick }: FAQSectionProps) => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="px-8 pb-7 pt-2 bg-gray-50/50">
-                    <p className="text-gray-600 leading-relaxed">
+                  <div className="px-8 pb-6 pt-2">
+                    <p className="text-muted-foreground leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
                 </motion.div>
 
-                {/* Animated left border on active */}
+                {/* Animated bottom border on active */}
                 {isActive && (
                   <motion.div
                     layoutId="faq-active-border"
-                    className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-light via-primary to-primary-dark"
-                    initial={{ scaleY: 0 }}
-                    animate={{ scaleY: 1 }}
+                    className="h-1 bg-gradient-to-r from-primary-light via-primary to-primary-dark"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
                     transition={{ duration: 0.4 }}
                   />
                 )}
