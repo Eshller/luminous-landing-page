@@ -47,7 +47,7 @@ export const Navbar = ({ onContactClick }: NavbarProps) => {
             <img
               src={mainLogo}
               alt="Adzzat Logo"
-              className="h-16 w-auto object-contain"
+              className="h-10 w-auto object-contain"
             />
           </motion.div>
 
