@@ -49,7 +49,6 @@ export const Navbar = ({ onContactClick }: NavbarProps) => {
               alt="Adzzat Logo"
               className="h-12 w-12 object-contain"
             />
-            <span className="text-xl font-bold gradient-text">Adzzat</span>
           </motion.div>
 
           {/* Navigation Links */}
