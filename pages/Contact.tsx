@@ -38,7 +38,7 @@ const ContactPage: React.FC = () => {
         <ContactSection
           title="Let's build your data advantage together"
           mainMessage="Contact our team"
-          contactEmail="hello@adzaat.com"
+          contactEmail="hello@adzzat.com"
           socialLinks={[
             {
               id: "1",
