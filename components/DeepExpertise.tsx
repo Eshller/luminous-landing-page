@@ -93,7 +93,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  Multi-Modal Annotations
+                  Multi-Modal Annotation
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Precise labeling across text, images, video, and audio for
@@ -125,7 +125,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  Code-Gen &amp; Debugging
+                  Code Generation and Debugging Evaluation
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Training models to write, analyze, and fix code with high
@@ -158,7 +158,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  Domain Specific SFT
+                  Domain-Specific Fine-Tuning
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Customized fine-tuning for specialized industries and use
@@ -187,7 +187,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  Advanced Reasoning
+                  Advanced Reasoning Evaluation
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Enhancing model capabilities to solve multi-step problems
@@ -222,7 +222,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  Multi-Turn Conversation
+                  Multi-Turn Dialogue Structuring
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Crafting natural dialogue flows with context retention and
@@ -253,7 +253,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  Text-To-SQL
+                  Text-To-SQL Validation
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Converting natural language queries into accurate database
@@ -285,7 +285,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  RAG Training &amp; Eval
+                  RAG Training and Evaluation
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Optimizing retrieval-augmented generation for
@@ -322,7 +322,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  Model Evaluation
+                  Model Benchmarking
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Rigorous testing and benchmarking to ensure model performance
@@ -359,7 +359,7 @@ const DeepExpertise: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tight">
-                  Indic Language Work
+                  Indic Language Expertise
                 </h3>
                 <p className="mt-3 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   Specialized expertise in Indian languages for inclusive AI

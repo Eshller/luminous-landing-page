@@ -677,7 +677,22 @@ const Homepage: React.FC = () => {
                   className="text-sm sm:text-base text-slate-400 max-w-lg leading-relaxed"
                   variants={fadeInUp}
                 >
-                  As AI companies transition from rapid growth to category leadership, evaluation becomes mission-critical. Adzzat provides managed, end-to-end AI evaluation systems powered by a curated elite network of contributors from IITs, PhDs, and Tier-1 institutions.
+                  As AI companies transition from rapid growth to category leadership, evaluation becomes mission-critical.
+                </motion.p>
+                <motion.ul
+                  className="text-sm sm:text-base text-slate-400 max-w-lg space-y-1 list-none"
+                  variants={fadeInUp}
+                >
+                  <li>Low-signal annotation.</li>
+                  <li>Unstructured RLHF.</li>
+                  <li>Surface-level coding benchmarks.</li>
+                  <li>Inconsistent domain validation.</li>
+                </motion.ul>
+                <motion.p
+                  className="text-sm sm:text-base text-slate-400 max-w-lg leading-relaxed"
+                  variants={fadeInUp}
+                >
+                  At scale, these weaknesses compound. Adzzat provides managed, end-to-end AI evaluation systems powered by a curated elite network of contributors from IITs, PhDs, and Tier-1 institutions. This is not crowd labor. This is institutional-grade execution.
                 </motion.p>
                 <motion.div
                   className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-8 items-center lg:items-start"
@@ -727,7 +742,49 @@ const Homepage: React.FC = () => {
           </div>
         </section>
 
-        {/* ========== ABOUT / ROADMAP SECTION ========== */}
+        {/* ========== WHERE ADVANCED AI MEETS ELITE HUMAN EXPERTISE ========== */}
+        <section className="w-full bg-white py-20 sm:py-28 lg:py-32 relative overflow-hidden border-t border-slate-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl font-luxury font-bold text-[#313755] mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Where Advanced AI Meets Elite Human Expertise
+            </motion.h2>
+            <motion.p
+              className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-8 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              As AI systems scale, the need for high quality human expertise grows across every layer of development. From training and alignment to benchmarking, domain validation, and complex reasoning workflows, generic labor simply does not deliver the signal modern AI demands.
+            </motion.p>
+            <motion.p
+              className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+            >
+              Adzzat partners with high growth AI companies and frontier labs to deploy a rigorously vetted network of IIT graduates, PhDs, engineers, and domain specialists across the full spectrum of AI development needs. Elite talent. Structured execution. Built for teams that move fast and build responsibly.
+            </motion.p>
+            <motion.button
+              onClick={() => navigate("/contact")}
+              className="px-8 py-4 bg-[#040B23] text-white font-bold text-base uppercase tracking-wider hover:bg-[#1a2341] transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              Get Started Now
+            </motion.button>
+          </div>
+        </section>
+
+        {/* ========== THE EVALUATION BOTTLENECK AT SCALE ========== */}
 
         <section className="w-full bg-[#0A1628] py-20 sm:py-28 lg:py-32 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -746,15 +803,25 @@ const Homepage: React.FC = () => {
                     <span className="text-[#412e8f]">Scale</span>
                   </h2>
                   <div className="h-6"></div>
+                  <p className="text-sm sm:text-base md:text-xl text-slate-200 max-w-xl mb-4">
+                    Foundation models and generative systems fail not because of architecture, but because of evaluation quality. When internal teams attempt to scale evaluation:
+                  </p>
+                  <ul className="text-sm sm:text-base md:text-lg text-slate-200 max-w-xl space-y-1 mb-6">
+                    <li>• RLHF pipelines lose calibration</li>
+                    <li>• RAG systems hallucinate in edge cases</li>
+                    <li>• Coding benchmarks miss adversarial failures</li>
+                    <li>• Domain-specific models lack contextual depth</li>
+                    <li>• Multi-modal systems break under complexity</li>
+                  </ul>
                   <p className="text-sm sm:text-base md:text-xl text-slate-200 max-w-xl">
-                    Foundation models and generative systems fail not because of architecture, but because of evaluation quality. RLHF pipelines lose calibration. RAG systems hallucinate in edge cases. Coding benchmarks miss adversarial failures. Generic crowd platforms cannot solve this — evaluation must be structured, domain-driven, and managed.
+                    Generic crowd platforms cannot solve this. Evaluation must be structured, domain-driven, and managed.
                   </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-6 sm:space-y-0">
                   <div className="border-l-4 border-[#412e8f] pl-6 sm:pl-8">
                     <div className="text-4xl sm:text-5xl md:text-6xl font-luxury font-semibold text-white mb-2">
-                      900K+
+                      100K+
                     </div>
                     <p className="text-base sm:text-lg text-slate-200">
                       Professionals across 50+ domains
@@ -762,7 +829,7 @@ const Homepage: React.FC = () => {
                   </div>
                   <div className="border-l-4 border-[#412e8f] pl-6 sm:pl-8">
                     <div className="text-4xl sm:text-5xl md:text-6xl font-luxury font-semibold text-white mb-2">
-                      53K+
+                      10K+
                     </div>
                     <p className="text-base sm:text-lg text-slate-200">
                       PhD-qualified experts
@@ -973,61 +1040,20 @@ const Homepage: React.FC = () => {
               </div>
 
               <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-luxury font-semibold text-[#313755] leading-snug sm:leading-tight tracking-tight">
-                "Building reliable AI products demands{" "}
+                "Adzzat's{" "}
                 <span className="text-[#412e8f]">
-                  exceptional training data.
+                  structured onboarding and intellectual rigor
                 </span>{" "}
-                Adzzat delivered exactly that. Their team collaborated deeply
-                with us as we{" "}
-                <span className="text-[#412e8f]">
-                  scaled our annotation pipeline
-                </span>{" "}
-                and they adapted to our evolving needs seamlessly. Highly
-                recommended."
+                set them apart. Their contributors treat evaluation as serious
+                work — high accountability, consistent calibration, and depth
+                that generic platforms simply cannot match. When model quality
+                is strategic, this is the partner you want."
               </blockquote>
 
               <div className="space-y-4">
                 <p className="text-sm sm:text-base text-[#313755]/60 font-medium">
-                  Head of AI Data Operations at TechCorp
+                  Head of AI Evaluation, Frontier Lab
                 </p>
-
-                <div className="flex items-center justify-center gap-2">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="text-[#2563eb]"
-                  >
-                    <path
-                      d="M12 2L2 7L12 12L22 7L12 2Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M2 17L12 22L22 17"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M2 12L12 17L22 12"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span className="text-lg sm:text-xl font-bold text-[#313755] tracking-tight">
-                    DataStack
-                  </span>
-                  <span className="text-[#2563eb] text-xs font-bold align-super">
-                    ®
-                  </span>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -1038,6 +1064,51 @@ const Homepage: React.FC = () => {
           <EnterpriseAI />
         </div>
 
+        {/* ========== CURATED ELITE NETWORK ========== */}
+        <section className="w-full bg-white py-20 sm:py-28 lg:py-32 relative overflow-hidden border-t border-slate-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl font-luxury font-bold text-[#313755] mb-6 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Curated <span className="text-[#412e8f]">Elite Network</span>
+            </motion.h2>
+            <motion.p
+              className="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+            >
+              We do not operate as a marketplace. Adzzat deploys a curated elite network of contributors including:
+            </motion.p>
+            <motion.ul
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto mb-10 text-slate-600"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <li>• IIT graduates</li>
+              <li>• PhD-qualified experts</li>
+              <li>• Senior domain professionals</li>
+              <li>• Advanced software engineers</li>
+              <li>• Specialized subject matter experts</li>
+            </motion.ul>
+            <motion.p
+              className="text-base text-slate-500 text-center mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+            >
+              Every contributor undergoes: domain expertise validation, analytical reasoning assessment, technical capability screening, and structured workflow onboarding. We prioritize signal density over volume.
+            </motion.p>
+          </div>
+        </section>
+
         <div className="lg:-mt-16">
           <CustomizationLayers />
         </div>
@@ -1045,6 +1116,52 @@ const Homepage: React.FC = () => {
         <div className="-mt-8 sm:-mt-16">
           <DeepExpertise />
         </div>
+
+        {/* ========== BUILT FOR UNICORN-STAGE AI COMPANIES ========== */}
+        <section className="w-full bg-slate-50 py-20 sm:py-28 lg:py-32 relative overflow-hidden border-t border-slate-200">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl font-luxury font-bold text-[#313755] mb-6 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Built For <span className="text-[#412e8f]">Unicorn-Stage</span> AI Companies
+            </motion.h2>
+            <motion.p
+              className="text-lg text-slate-600 text-center mb-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+            >
+              Adzzat partners with:
+            </motion.p>
+            <motion.ul
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto mb-10 text-slate-600"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <li>• Foundation model companies</li>
+              <li>• High-growth AI startups approaching Series C and beyond</li>
+              <li>• Newly unicorn AI companies</li>
+              <li>• Enterprise AI divisions</li>
+              <li>• AI infrastructure builders</li>
+            </motion.ul>
+            <motion.p
+              className="text-lg text-slate-600 text-center max-w-xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+            >
+              When model quality becomes strategic, evaluation cannot be commoditized.
+            </motion.p>
+          </div>
+        </section>
+
         <motion.section
           id="AgenticPlatform"
           className="w-full flex flex-col justify-center items-center px-4 sm:px-6 py-16 sm:py-20 lg:py-24 bg-[#0A0A0A] text-white font-luxury overflow-hidden relative z-10"
@@ -1068,7 +1185,7 @@ const Homepage: React.FC = () => {
                     <span className="text-[#412e8f]">Evaluation Sets</span>
                   </h2>
                   <p className="text-xl text-neutral-300 font-medium leading-relaxed max-w-lg">
-                    Curated, off-the-shelf evaluation datasets across RLHF, RAG, coding, and multi-modal domains — structured for immediate integration into production pipelines.
+                    For teams seeking acceleration, Adzzat also offers curated, off-the-shelf evaluation datasets across RLHF, RAG, coding, and multi-modal domains. These are structured for immediate integration into production pipelines. Position this as an accelerator, not your core identity.
                   </p>
                 </div>
               </div>
@@ -1078,16 +1195,15 @@ const Homepage: React.FC = () => {
               <div className="flex flex-col items-start gap-3">
                 <div className="text-neutral-400">
                   <span className="material-symbols-outlined text-[28px]">
-                    dns
+                    dataset
                   </span>
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-base font-bold text-white uppercase tracking-wide">
-                    Smart Cataloging
+                    RLHF &amp; Alignment
                   </h3>
                   <p className="text-sm text-neutral-400 leading-relaxed">
-                    Automated metadata extraction and intelligent tagging for
-                    effortless discovery across your entire data lake.
+                    High-signal evaluation sets for preference modeling and alignment workflows.
                   </p>
                 </div>
               </div>
@@ -1095,16 +1211,15 @@ const Homepage: React.FC = () => {
               <div className="flex flex-col items-start gap-3">
                 <div className="text-neutral-400">
                   <span className="material-symbols-outlined text-[28px]">
-                    monitoring
+                    search
                   </span>
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-base font-bold text-white uppercase tracking-wide">
-                    Real-time Analytics
+                    RAG &amp; Retrieval
                   </h3>
                   <p className="text-sm text-neutral-400 leading-relaxed">
-                    Instant insights into data usage, performance metrics, and
-                    team collaboration patterns without latency.
+                    Curated benchmarks for retrieval-augmented generation and knowledge grounding.
                   </p>
                 </div>
               </div>
@@ -1112,22 +1227,65 @@ const Homepage: React.FC = () => {
               <div className="flex flex-col items-start gap-3">
                 <div className="text-neutral-400">
                   <span className="material-symbols-outlined text-[28px]">
-                    api
+                    code
                   </span>
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-base font-bold text-white uppercase tracking-wide">
-                    API Integration
+                    Coding &amp; Multi-Modal
                   </h3>
                   <p className="text-sm text-neutral-400 leading-relaxed">
-                    Seamlessly connect with your existing ML pipelines via our
-                    robust, type-safe REST and gRPC endpoints.
+                    Evaluation datasets for code generation and multi-modal reasoning tasks.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </motion.section>
+
+        {/* ========== CONTRIBUTOR CULTURE ========== */}
+        <section className="w-full bg-[#0A1628] py-20 sm:py-28 lg:py-32 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl font-luxury font-bold text-white mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Contributor <span className="text-[#412e8f]">Culture</span>
+            </motion.h2>
+            <motion.p
+              className="text-lg text-slate-200 mb-10 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+            >
+              Our contributor testimonials reflect:
+            </motion.p>
+            <motion.ul
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto text-slate-200 text-left"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <li>• Structured onboarding</li>
+              <li>• Intellectual rigor</li>
+              <li>• Serious evaluation workflows</li>
+              <li>• High accountability standards</li>
+            </motion.ul>
+            <motion.p
+              className="text-sm text-slate-400 mt-10 italic"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+            >
+              Embed video testimonials here with framing focused on quality culture and execution depth.
+            </motion.p>
+          </div>
+        </section>
 
         {/* ========== FOUNDATIONAL PILLARS SECTION ========== */}
         <section className="w-full bg-white py-12 sm:py-28 lg:py-32 relative overflow-hidden">
@@ -1180,15 +1338,13 @@ const Homepage: React.FC = () => {
                   <Users className="w-10 h-10 text-[#2563eb]" />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-semibold text-black mb-3">
-                  Exceptional Experts
+                  Institutional-Grade Expertise
                 </h3>
                 <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                  900,000+ of India's very best (think IITians, PhDs, Poets,
-                  etc)
+                  Elite contributors from IITs, PhDs, and domain specialists deployed with structured rigor.
                 </p>
               </motion.div>
 
-              {/* Hands-on QC */}
               <motion.div
                 variants={{
                   hidden: { opacity: 0, x: 80 },
@@ -1207,10 +1363,10 @@ const Homepage: React.FC = () => {
                   <SearchCheck className="w-10 h-10 text-[#2563eb]" />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-semibold text-black mb-3">
-                  Hands-on QC
+                  Engineered Evaluation Systems
                 </h3>
                 <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                  Full playbook to ensure truly pristine data
+                  Managed RLHF, RAG, benchmarking, and annotation frameworks built for reliability and scale.
                 </p>
               </motion.div>
 
@@ -1236,8 +1392,7 @@ const Homepage: React.FC = () => {
                   Specialized Platform
                 </h3>
                 <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                  Purpose-built for the GenAI era, supporting RLHF, Agentic,
-                  etc.
+                  Built for the demands of the GenAI era, powering RLHF, agentic workflows, and next-generation AI systems.
                 </p>
               </motion.div>
             </motion.div>
@@ -1248,6 +1403,49 @@ const Homepage: React.FC = () => {
         <div className="-mt-10 lg:-mt-20">
           <Certification />
         </div>
+
+        {/* ========== FINAL CTA SECTION ========== */}
+        <section className="w-full bg-[#0A1628] py-20 sm:py-28 lg:py-32 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl font-luxury font-bold text-white mb-8 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              AI Systems At Unicorn Scale Require Institutional-Grade Evaluation Infrastructure
+            </motion.h2>
+            <motion.p
+              className="text-lg text-slate-200 mb-10 leading-relaxed max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+            >
+              Adzzat partners with high-growth AI companies to design, deploy, and scale evaluation systems that match the ambition of their models. We are not a dataset vendor. We are not a crowd platform. We are evaluation infrastructure.
+            </motion.p>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <button
+                onClick={() => navigate("/contact")}
+                className="px-8 py-4 bg-white text-[#0A1628] font-bold hover:bg-slate-100 transition-all duration-300"
+              >
+                Request Enterprise Access
+              </button>
+              <button
+                onClick={() => navigate("/contact")}
+                className="px-8 py-4 border-2 border-white text-white font-bold hover:bg-white hover:text-[#0A1628] transition-all duration-300"
+              >
+                Schedule Strategic Evaluation Call
+              </button>
+            </motion.div>
+          </div>
+        </section>
       </div>
       <Footer />
     </div>

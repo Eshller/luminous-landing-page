@@ -43,9 +43,9 @@ const Certification: React.FC = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-24 max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-luxury font-bold text-black mb-3">
-              Enterprise <span className="text-[#412e8f]">Certifications</span>
+              Enterprise-Grade <span className="text-[#412e8f]">Compliance</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl font-luxury font-light text-[#313755] leading-snug tracking-tight max-w-2xl mx-auto">Transparency engineered into every interaction. Verified by global standards, secured by design.</p>
+            <p className="text-lg sm:text-xl md:text-2xl font-luxury font-light text-[#313755] leading-snug tracking-tight max-w-2xl mx-auto">SOC 2 Type II · ISO 27001 · GDPR · HIPAA. Security and data integrity engineered into every workflow.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">

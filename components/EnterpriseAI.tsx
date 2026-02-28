@@ -47,11 +47,13 @@ const EnterpriseAI: React.FC = () => {
         <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16 lg:mb-24 space-y-4">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight text-white">
-              <span className="text-[#412e8f]">Enterprise Grade</span> AI Evaluation <br className="hidden md:block" />
-              <span className="text-white">Capabilities</span>
+              The <span className="text-[#412e8f]">Adzzat</span> Model
             </h2>
+            <p className="text-xl md:text-2xl font-semibold text-slate-200">
+              Managed Evaluation. End-to-End Execution.
+            </p>
             <p className="text-lg md:text-xl max-w-3xl mx-auto font-light text-slate-200">
-              Adzzat operates as an extension of your internal AI team. We architect and execute evaluation systems across RLHF, coding benchmarks, RAG, domain-specific SFT, multi-modal annotation, and more.
+              Adzzat operates as an extension of your internal AI team. We architect and execute evaluation systems across RLHF, coding benchmarks, RAG training and evaluation, domain-specific SFT, multi-modal annotation, multi-turn reasoning, advanced benchmarking, and custom AI workflows. From contributor deployment to quality control, every engagement is structured for reliability and scale.
             </p>
           </div>
 

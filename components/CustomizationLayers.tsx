@@ -26,7 +26,7 @@ const CustomizationLayers: React.FC = () => {
               Our Evaluation <span className="text-[#412e8f]">Infrastructure</span>
             </h2>
             <p className="text-xl text-slate-500 font-luxury max-w-2xl mx-auto leading-relaxed">
-              From architecture design to scalable execution, every engagement is structured for reliability.
+              From contributor deployment to quality control, every engagement is structured for reliability and scale.
             </p>
           </div>
 
@@ -46,24 +46,10 @@ const CustomizationLayers: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-[#313755] tracking-tight">Architecture Design</h3>
               </div>
-              <ul className="space-y-4 mt-auto">
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Structured Evaluation Frameworks
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Aligned to Model Objectives
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Custom Workflow Design
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Evaluation Criteria Definition
-                </li>
-              </ul>
+              <p className="text-sm font-medium text-[#313755]/70 mt-auto">
+                <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm inline-block mr-2 align-middle"></span>
+                We define structured evaluation frameworks aligned to your model objectives.
+              </p>
             </motion.div>
 
             <motion.div
@@ -81,24 +67,10 @@ const CustomizationLayers: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-[#313755] tracking-tight">Domain Deployment</h3>
               </div>
-              <ul className="space-y-4 mt-auto">
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Experts Matched to Specialization
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Not Generic Task Pools
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Domain Expertise Validation
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Analytical Reasoning Assessment
-                </li>
-              </ul>
+              <p className="text-sm font-medium text-[#313755]/70 mt-auto">
+                <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm inline-block mr-2 align-middle"></span>
+                Experts are matched to specialization, not generic task pools.
+              </p>
             </motion.div>
 
             <motion.div
@@ -116,24 +88,10 @@ const CustomizationLayers: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-[#313755] tracking-tight">Quality Control Framework</h3>
               </div>
-              <ul className="space-y-4 mt-auto">
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Multi-Layer Validation
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Calibration Loops
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Performance Monitoring
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Signal Density Focus
-                </li>
-              </ul>
+              <p className="text-sm font-medium text-[#313755]/70 mt-auto">
+                <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm inline-block mr-2 align-middle"></span>
+                Multi-layer validation, calibration loops, and performance monitoring.
+              </p>
             </motion.div>
 
             <motion.div
@@ -151,24 +109,10 @@ const CustomizationLayers: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-[#313755] tracking-tight">Scalable Execution</h3>
               </div>
-              <ul className="space-y-4 mt-auto">
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Rapid Expansion
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  No Signal Degradation
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  Structured Contributor Deployment
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium text-[#313755]/70">
-                  <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm"></span>
-                  End-to-End Management
-                </li>
-              </ul>
+              <p className="text-sm font-medium text-[#313755]/70 mt-auto">
+                <span className="h-2 w-2 diamond-bullet bg-[#412e8f] shadow-sm inline-block mr-2 align-middle"></span>
+                Rapid expansion without degradation in signal quality.
+              </p>
             </motion.div>
           </div>
 

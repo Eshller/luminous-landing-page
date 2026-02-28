@@ -15,7 +15,7 @@ const CapabilityGrid: React.FC<CapabilityGridProps> = ({ onContentChange, active
     },
     {
       id: 'cross-modal',
-      label: 'Code Gen & Debugging Eval',
+      label: 'Code Generation and Debugging Evaluation',
       icon: 'code'
     },
     {

@@ -84,7 +84,7 @@ const About: React.FC = () => {
     },
     {
       name: "Niket",
-      role: "CTO",
+      role: "Founding Engineer",
       image: "/niket.jpeg",
       bio: "Technology leader architecting scalable AI systems.",
       linkedin: "#",
@@ -200,15 +200,15 @@ const About: React.FC = () => {
             </motion.div>
 
             <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-luxury font-semibold text-[#0A1628] mb-6 leading-tight tracking-tight">
-              Empowering AI with
+              The Right Talent Layer
               <br />
                 <span className="text-[#4B006E] font-luxury font-semibold">
-                  Exceptional Data
+                  Changes Everything
                 </span>
             </h1>
 
             <p className="text-xl sm:text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-10 leading-relaxed">
-              We're on a mission to revolutionize how AI models access and leverage high-quality training data.
+              Adzzat helps frontier AI companies deploy institutional-grade human intelligence across every stage of model development.
             </p>
           </motion.div>
 
@@ -438,7 +438,7 @@ const About: React.FC = () => {
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h3 className="font-display text-2xl text-white font-medium tracking-tight">Niket</h3>
-                    <p className="text-white text-sm font-medium tracking-wider uppercase mt-1">CTO</p>
+                    <p className="text-white text-sm font-medium tracking-wider uppercase mt-1">Founding Engineer</p>
                   </div>
                   <div className="flex space-x-2 social-reveal delay-75">
                     <a className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md flex items-center justify-center transition-colors text-white border border-white/10" href="https://www.linkedin.com/in/niketsingh304" target="_blank" rel="noopener noreferrer">

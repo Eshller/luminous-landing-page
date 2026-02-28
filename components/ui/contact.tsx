@@ -299,44 +299,80 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                 <div className="space-y-2">
                   <Label className="text-xs font-semibold text-gray-700">
-                    What type of service you're interested in
+                    What type of engagement are you looking for?
                   </Label>
                   <div className="flex flex-wrap gap-4">
                     <label className="flex items-center gap-2 cursor-pointer">
                       <input
                         type="radio"
                         name="serviceType"
-                        value="SFT"
-                        checked={formData.serviceType === "SFT"}
+                        value="Model Training"
+                        checked={formData.serviceType === "Model Training"}
                         onChange={handleChange}
                         required
                         className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
                       />
-                      <span className="text-gray-700">SFT</span>
+                      <span className="text-gray-700">Model Training</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
                       <input
                         type="radio"
                         name="serviceType"
-                        value="Eval"
-                        checked={formData.serviceType === "Eval"}
+                        value="Alignment & RLHF"
+                        checked={formData.serviceType === "Alignment & RLHF"}
                         onChange={handleChange}
                         required
                         className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
                       />
-                      <span className="text-gray-700">Eval</span>
+                      <span className="text-gray-700">Alignment & RLHF</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
                       <input
                         type="radio"
                         name="serviceType"
-                        value="Others"
-                        checked={formData.serviceType === "Others"}
+                        value="Evaluation & Benchmarking"
+                        checked={formData.serviceType === "Evaluation & Benchmarking"}
                         onChange={handleChange}
                         required
                         className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
                       />
-                      <span className="text-gray-700">Others</span>
+                      <span className="text-gray-700">Evaluation & Benchmarking</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="Domain-Specific Expertise"
+                        checked={formData.serviceType === "Domain-Specific Expertise"}
+                        onChange={handleChange}
+                        required
+                        className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span className="text-gray-700">Domain-Specific Expertise</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="Custom AI Engagement"
+                        checked={formData.serviceType === "Custom AI Engagement"}
+                        onChange={handleChange}
+                        required
+                        className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span className="text-gray-700">Custom AI Engagement</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="Other"
+                        checked={formData.serviceType === "Other"}
+                        onChange={handleChange}
+                        required
+                        className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span className="text-gray-700">Other</span>
                     </label>
                   </div>
                 </div>
@@ -357,7 +393,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-0.5 flex-shrink-0"
                     />
                     <span className="text-xs text-gray-600 leading-relaxed">
-                      I consent to  Adzaat collecting and using my personal
+                      I consent to Adzzat collecting and using my personal
                       data for the purpose of responding to my inquiry, in
                       accordance with the Privacy Policy.
                     </span>
