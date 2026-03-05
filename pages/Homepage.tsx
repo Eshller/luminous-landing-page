@@ -1034,7 +1034,7 @@ const Homepage: React.FC = () => {
                   structured onboarding and intellectual rigor
                 </span>{" "}
                 set them apart. Their contributors treat evaluation as serious
-                work — high accountability, consistent calibration, and depth
+                work - high accountability, consistent calibration, and depth
                 that generic platforms simply cannot match. When model quality
                 is strategic, this is the partner you want."
               </blockquote>
