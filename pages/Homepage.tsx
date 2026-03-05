@@ -731,48 +731,6 @@ const Homepage: React.FC = () => {
           </div>
         </section>
 
-        {/* ========== WHERE ADVANCED AI MEETS ELITE HUMAN EXPERTISE ========== */}
-        <section className="w-full bg-white py-20 sm:py-28 lg:py-32 relative overflow-hidden border-t border-slate-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl font-luxury font-bold text-[#313755] mb-6 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Where Advanced AI Meets Elite Human Expertise
-            </motion.h2>
-            <motion.p
-              className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              As AI systems scale, the need for high quality human expertise grows across every layer of development. From training and alignment to benchmarking, domain validation, and complex reasoning workflows, generic labor simply does not deliver the signal modern AI demands.
-            </motion.p>
-            <motion.p
-              className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.15 }}
-            >
-              Adzzat partners with high growth AI companies and frontier labs to deploy a rigorously vetted network of IIT graduates, PhDs, engineers, and domain specialists across the full spectrum of AI development needs. Elite talent. Structured execution. Built for teams that move fast and build responsibly.
-            </motion.p>
-            <motion.button
-              onClick={() => navigate("/contact")}
-              className="px-8 py-4 bg-[#040B23] text-white font-bold text-base uppercase tracking-wider hover:bg-[#1a2341] transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              Get Started Now
-            </motion.button>
-          </div>
-        </section>
-
         {/* ========== THE EVALUATION BOTTLENECK AT SCALE ========== */}
 
         <section className="w-full bg-[#0A1628] py-20 sm:py-28 lg:py-32 relative overflow-hidden">
