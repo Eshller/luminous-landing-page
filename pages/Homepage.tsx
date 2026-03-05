@@ -656,43 +656,32 @@ const Homepage: React.FC = () => {
                   variants={fadeInUp}
                 >
                   <span className="block font-luxury">
-                    Enterprise-Grade AI
-                  </span>
-                  <span className="block mt-3 sm:mt-4">
-                    <span className="inline-block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-luxury font-light italic text-gray-400 relative mr-3 sm:mr-5">
-                      Evaluation
-                    </span>
-                    <span className="relative inline font-luxury font-semibold">
-                      Infrastructure
-                    </span>
+                    Where Advanced AI Meets Elite Human Expertise
                   </span>
                 </motion.h1>
                 <motion.p
-                  className="text-base sm:text-lg md:text-xl text-slate-500 max-w-lg leading-relaxed"
+                  className="text-base sm:text-lg text-slate-500 max-w-lg leading-relaxed"
                   variants={fadeInUp}
                 >
-                  Built For High-Growth AI Companies Scaling Toward Unicorn Status
+                  As AI systems scale, the need for high quality human expertise grows across every layer of development.
                 </motion.p>
                 <motion.p
                   className="text-sm sm:text-base text-slate-400 max-w-lg leading-relaxed"
                   variants={fadeInUp}
                 >
-                  As AI companies transition from rapid growth to category leadership, evaluation becomes mission-critical.
+                  From training and alignment to benchmarking, domain validation, and complex reasoning workflows, generic labor simply does not deliver the signal modern AI demands.
                 </motion.p>
-                <motion.ul
-                  className="text-sm sm:text-base text-slate-400 max-w-lg space-y-1 list-none"
-                  variants={fadeInUp}
-                >
-                  <li>Low-signal annotation.</li>
-                  <li>Unstructured RLHF.</li>
-                  <li>Surface-level coding benchmarks.</li>
-                  <li>Inconsistent domain validation.</li>
-                </motion.ul>
                 <motion.p
                   className="text-sm sm:text-base text-slate-400 max-w-lg leading-relaxed"
                   variants={fadeInUp}
                 >
-                  At scale, these weaknesses compound. Adzzat provides managed, end-to-end AI evaluation systems powered by a curated elite network of contributors from IITs, PhDs, and Tier-1 institutions. This is not crowd labor. This is institutional-grade execution.
+                  Adzzat partners with high growth AI companies and frontier labs to deploy a rigorously vetted network of IIT graduates, PhDs, engineers, and domain specialists across the full spectrum of AI development needs.
+                </motion.p>
+                <motion.p
+                  className="text-sm sm:text-base text-slate-500 max-w-lg leading-relaxed font-medium"
+                  variants={fadeInUp}
+                >
+                  Elite talent. Structured execution. Built for teams that move fast and build responsibly.
                 </motion.p>
                 <motion.div
                   className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-8 items-center lg:items-start"
@@ -707,7 +696,7 @@ const Homepage: React.FC = () => {
                     }}
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
-                      REQUEST ENTERPRISE ACCESS
+                      GET STARTED NOW
                       <svg
                         width="16"
                         height="16"
@@ -821,7 +810,7 @@ const Homepage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-6 sm:space-y-0">
                   <div className="border-l-4 border-[#412e8f] pl-6 sm:pl-8">
                     <div className="text-4xl sm:text-5xl md:text-6xl font-luxury font-semibold text-white mb-2">
-                      100K+
+                      10K+
                     </div>
                     <p className="text-base sm:text-lg text-slate-200">
                       Professionals across 50+ domains
@@ -829,7 +818,7 @@ const Homepage: React.FC = () => {
                   </div>
                   <div className="border-l-4 border-[#412e8f] pl-6 sm:pl-8">
                     <div className="text-4xl sm:text-5xl md:text-6xl font-luxury font-semibold text-white mb-2">
-                      10K+
+                      1K+
                     </div>
                     <p className="text-base sm:text-lg text-slate-200">
                       PhD-qualified experts
