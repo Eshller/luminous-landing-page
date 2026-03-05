@@ -642,7 +642,7 @@ const Homepage: React.FC = () => {
       />
       <div id="top" className="w-full relative pt-24">
         {/* ========== HERO SECTION ========== */}
-        <section className="w-full relative overflow-hidden -mt-6 pt-6 sm:-mt-10 sm:pt-10 min-h-screen">
+        <section className="w-full relative overflow-hidden -mt-6 pt-6 sm:-mt-10 sm:pt-10 pb-16 sm:pb-20 lg:pb-24">
           <div className="w-full max-w-page mx-auto px-4 sm:px-6 py-6 sm:py-10 lg:py-10 relative z-10">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-16">
               <motion.div
