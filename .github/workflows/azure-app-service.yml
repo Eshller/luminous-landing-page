@@ -67,6 +67,6 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: Adzzat-landing-page
-          resource-group-name: Adzzat-landing-page
+          resource-group-name: adzzat-prod
           package: .
           startup-command: "node server.js"
