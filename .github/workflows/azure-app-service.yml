@@ -1,4 +1,4 @@
-name: Build and deploy Next.js app to Azure App Service
+name: Build and deploy to Azure App Service
 
 on:
   push:
@@ -12,7 +12,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,7 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: npm
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -66,7 +65,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: Adzzat-landing-page
+          app-name: ${{ vars.AZURE_WEBAPP_NAME }}
           resource-group-name: adzzat-prod
           package: .
           startup-command: "node server.js"
