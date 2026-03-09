@@ -1,5 +1,6 @@
 import { HeroScroll } from "@/components/hero/HeroScroll";
 import { CoreCapabilitiesSection } from "@/components/sections/CoreCapabilitiesSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { DataGapSection } from "@/components/sections/DataGapSection";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 import { ProprietaryMethodologySection } from "@/components/sections/ProprietaryMethodologySection";
@@ -24,6 +25,7 @@ export default function Home() {
       <CoreCapabilitiesSection />
       <ProprietaryMethodologySection />
       <TechnicalIntegrationSection />
+      <AboutSection />
       <FinalCtaSection />
     </main>
   );
