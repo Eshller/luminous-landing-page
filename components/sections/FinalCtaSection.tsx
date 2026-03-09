@@ -93,7 +93,7 @@ export function FinalCtaSection() {
         }}
         aria-hidden
       >
-        06
+        07
       </div>
 
       <motion.div

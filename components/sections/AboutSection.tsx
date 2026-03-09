@@ -99,7 +99,7 @@ export function AboutSection() {
         }}
         aria-hidden
       >
-        04
+        06
       </div>
 
       {/* Top accent line */}
