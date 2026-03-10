@@ -131,10 +131,10 @@
 }
 
 :root {
-  /* Hero section — deep tech, premium. Brand: #d86dfc */
+  /* Hero section — deep tech, premium. Brand: #1e2848 */
   --hero-bg-start: #050505;
   --hero-bg-end: #000000;
-  --brand: #d86dfc;
+  --brand: #1e2848;
   --hero-accent-blue: #0ea5e9;
   --hero-accent-purple: #8b5cf6;
   --hero-accent-emerald: #10b981;
@@ -151,8 +151,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #d86dfc;
-  --primary-foreground: #000000;
+  --primary: #1e2848;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -181,7 +181,7 @@
 .dark {
   --hero-bg-start: #050505;
   --hero-bg-end: #000000;
-  --brand: #d86dfc;
+  --brand: #1e2848;
   --hero-accent-blue: #0ea5e9;
   --hero-accent-purple: #8b5cf6;
   --hero-accent-emerald: #10b981;
@@ -197,9 +197,9 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  /* Brand #d86dfc */
-  --primary: #d86dfc;
-  --primary-foreground: #000000;
+  /* Brand #1e2848 */
+  --primary: #1e2848;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);

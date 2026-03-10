@@ -90,7 +90,7 @@ export function TechnicalIntegrationSection() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 60% 40% at 20% 50%, rgba(216, 109, 252, 0.04) 0%, transparent 55%)",
+              "radial-gradient(ellipse 60% 40% at 20% 50%, rgba(30, 40, 72, 0.2) 0%, transparent 55%)",
           }}
         />
         <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
@@ -139,7 +139,7 @@ export function TechnicalIntegrationSection() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 40% at 20% 50%, rgba(216, 109, 252, 0.04) 0%, transparent 55%)",
+            "radial-gradient(ellipse 60% 40% at 20% 50%, rgba(30, 40, 72, 0.2) 0%, transparent 55%)",
         }}
       />
       <div

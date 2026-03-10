@@ -65,7 +65,7 @@ export function AboutSection() {
 
   const gradientBg = {
     background:
-      "radial-gradient(ellipse 90% 60% at 50% 0%, rgba(216, 109, 252, 0.10) 0%, transparent 55%), radial-gradient(ellipse 80% 50% at 10% 80%, rgba(30, 64, 175, 0.25) 0%, transparent 55%)",
+      "radial-gradient(ellipse 90% 60% at 50% 0%, rgba(30, 40, 72, 0.25) 0%, transparent 55%), radial-gradient(ellipse 80% 50% at 10% 80%, rgba(30, 64, 175, 0.25) 0%, transparent 55%)",
   };
 
   return (

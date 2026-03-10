@@ -73,10 +73,10 @@ export function DataGapSection() {
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`, backgroundSize: "min(120px, 15vw) min(120px, 15vw)" }} />
         <div className="relative z-10 mx-auto w-full max-w-200">
           <p className="mb-4 text-[0.6875rem] font-medium uppercase tracking-[0.35em] md:mb-5" style={{ fontFamily: "var(--font-inter)", color: "var(--brand)" }}>The Synthetic Wall</p>
-          <h2 id="data-gap-heading" className="mb-10 max-w-4xl md:mb-14" style={{ fontFamily: "var(--font-geist-sans)", fontSize: "clamp(2.25rem, 6vw, 4.25rem)", fontWeight: 600, lineHeight: 1.12, letterSpacing: "-0.03em", background: "linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.92) 40%, rgba(216, 109, 252, 0.9) 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>{LINES[0].text}</h2>
+          <h2 id="data-gap-heading" className="mb-10 max-w-4xl md:mb-14" style={{ fontFamily: "var(--font-geist-sans)", fontSize: "clamp(2.25rem, 6vw, 4.25rem)", fontWeight: 600, lineHeight: 1.12, letterSpacing: "-0.03em", background: "linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.92) 40%, rgba(30, 40, 72, 0.95) 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>{LINES[0].text}</h2>
           <div className="space-y-6 md:space-y-8">
             {LINES.slice(1, -1).map((line, i) => (
-              <p key={i} className="pl-5 md:pl-6" style={{ fontFamily: "var(--font-inter)", color: "rgba(255,255,255,0.88)", fontSize: "clamp(1rem, 2.1vw, 1.3125rem)", lineHeight: 1.6, borderLeft: "2px solid rgba(216, 109, 252, 0.35)" }}>{line.text}</p>
+              <p key={i} className="pl-5 md:pl-6" style={{ fontFamily: "var(--font-inter)", color: "rgba(255,255,255,0.88)", fontSize: "clamp(1rem, 2.1vw, 1.3125rem)", lineHeight: 1.6, borderLeft: "2px solid rgba(30, 40, 72, 0.5)" }}>{line.text}</p>
             ))}
           </div>
           <p className="mt-10 max-w-2xl md:mt-14" style={{ fontFamily: "var(--font-geist-sans)", color: "var(--brand)", fontSize: "clamp(1.25rem, 2.75vw, 1.75rem)", fontWeight: 500, lineHeight: 1.4 }}>{LINES[3].text}</p>
@@ -108,7 +108,7 @@ export function DataGapSection() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 100% 80% at 50% 20%, rgba(216, 109, 252, 0.06) 0%, transparent 50%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(216, 109, 252, 0.04) 0%, transparent 50%)",
+            "radial-gradient(ellipse 100% 80% at 50% 20%, rgba(30, 40, 72, 0.15) 0%, transparent 50%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(30, 40, 72, 0.12) 0%, transparent 50%)",
         }}
       />
       <div
@@ -153,11 +153,11 @@ export function DataGapSection() {
             fontWeight: 600,
             lineHeight: 1.12,
             letterSpacing: "-0.03em",
-            background: "linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.92) 40%, rgba(216, 109, 252, 0.9) 100%)",
+            background: "linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.92) 40%, rgba(30, 40, 72, 0.95) 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
-            filter: "drop-shadow(0 0 40px rgba(216, 109, 252, 0.15))",
+            filter: "drop-shadow(0 0 40px rgba(30, 40, 72, 0.3))",
           }}
         >
           {LINES[0].text}
@@ -175,7 +175,7 @@ export function DataGapSection() {
             fontWeight: 400,
             lineHeight: 1.6,
             letterSpacing: "0.01em",
-            borderLeft: "2px solid rgba(216, 109, 252, 0.35)",
+            borderLeft: "2px solid rgba(30, 40, 72, 0.5)",
           }}
         >
           {LINES[1].text}
@@ -191,7 +191,7 @@ export function DataGapSection() {
             fontWeight: 400,
             lineHeight: 1.6,
             letterSpacing: "0.01em",
-            borderLeft: "2px solid rgba(216, 109, 252, 0.35)",
+            borderLeft: "2px solid rgba(30, 40, 72, 0.5)",
           }}
         >
           {LINES[2].text}

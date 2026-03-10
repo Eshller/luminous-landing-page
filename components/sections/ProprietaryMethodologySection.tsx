@@ -75,9 +75,9 @@ function NodeNetworkVisual({ interactive = true }: { interactive?: boolean }) {
             </feMerge>
           </filter>
           <linearGradient id="line-grad-methodology" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="rgba(216,109,252,0.2)" />
-            <stop offset="50%" stopColor="rgba(216,109,252,0.5)" />
-            <stop offset="100%" stopColor="rgba(216,109,252,0.2)" />
+            <stop offset="0%" stopColor="rgba(30,40,72,0.4)" />
+            <stop offset="50%" stopColor="rgba(30,40,72,0.7)" />
+            <stop offset="100%" stopColor="rgba(30,40,72,0.4)" />
           </linearGradient>
           {/* Cursor-following spotlight (interactive); gradientUnits 0–1 */}
           {interactive && cursor && (
@@ -90,8 +90,8 @@ function NodeNetworkVisual({ interactive = true }: { interactive?: boolean }) {
               fx={cursor.x}
               fy={cursor.y}
             >
-              <stop offset="0%" stopColor="rgba(216,109,252,0.25)" />
-              <stop offset="60%" stopColor="rgba(216,109,252,0.06)" />
+              <stop offset="0%" stopColor="rgba(30,40,72,0.5)" />
+              <stop offset="60%" stopColor="rgba(30,40,72,0.15)" />
               <stop offset="100%" stopColor="transparent" />
             </radialGradient>
           )}
@@ -144,7 +144,7 @@ function NodeNetworkVisual({ interactive = true }: { interactive?: boolean }) {
                 cx={node.x}
                 cy={node.y}
                 r={r}
-                fill={`rgba(216, 109, 252, ${opacity})`}
+                fill={`rgba(30, 40, 72, ${opacity})`}
                 className="animate-pulse"
                 style={{
                   animationDuration: near ? "1.2s" : "3s",
@@ -225,7 +225,7 @@ export function ProprietaryMethodologySection() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 40% at 80% 50%, rgba(216, 109, 252, 0.05) 0%, transparent 55%)",
+              "radial-gradient(ellipse 70% 40% at 80% 50%, rgba(30, 40, 72, 0.2) 0%, transparent 55%)",
           }}
         />
         <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
@@ -287,7 +287,7 @@ export function ProprietaryMethodologySection() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 70% 40% at 80% 50%, rgba(216, 109, 252, 0.05) 0%, transparent 55%)",
+            "radial-gradient(ellipse 70% 40% at 80% 50%, rgba(30, 40, 72, 0.2) 0%, transparent 55%)",
         }}
       />
       <div

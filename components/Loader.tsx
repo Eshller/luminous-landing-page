@@ -20,7 +20,7 @@ export function Loader({ progress }: LoaderProps) {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 100% 80% at 50% 50%, rgba(216, 109, 252, 0.06) 0%, transparent 60%)",
+            "radial-gradient(ellipse 100% 80% at 50% 50%, rgba(30, 40, 72, 0.15) 0%, transparent 60%)",
         }}
       />
 
@@ -36,7 +36,7 @@ export function Loader({ progress }: LoaderProps) {
             className="select-none text-[clamp(2.25rem,8vw,5rem)] font-semibold tracking-tight"
             style={{
               fontFamily: "var(--font-geist-sans), var(--font-inter), sans-serif",
-              background: "linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.85) 50%, rgba(216, 109, 252, 0.9) 100%)",
+              background: "linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.85) 50%, rgba(30, 40, 72, 0.95) 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
