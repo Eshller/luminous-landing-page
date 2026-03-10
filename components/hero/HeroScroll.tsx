@@ -116,7 +116,7 @@ export function HeroScroll() {
           className="absolute inset-0 h-full w-full object-cover"
           style={{
             background:
-              "linear-gradient(180deg, #050505 0%, #0a0a0a 40%, #000 100%), radial-gradient(ellipse 80% 50% at 50% 30%, rgba(30, 40, 72, 0.2) 0%, transparent 50%)",
+              "linear-gradient(180deg, #050505 0%, #0a0a0a 40%, #000 100%), radial-gradient(ellipse 80% 50% at 50% 30%, rgba(216, 109, 252, 0.08) 0%, transparent 50%)",
           }}
           aria-hidden
         />

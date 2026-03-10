@@ -103,10 +103,10 @@ const GLASS_STYLE = {
 
 const HERO_GLASS_STYLE = {
   ...GLASS_STYLE,
-  borderColor: "rgba(30, 40, 72, 0.4)",
+  borderColor: "rgba(216, 109, 252, 0.12)",
   backgroundColor: "rgba(255,255,255,0.04)",
   boxShadow:
-    "inset 0 1px 0 0 rgba(255,255,255,0.06), 0 0 0 1px rgba(30, 40, 72, 0.4)",
+    "inset 0 1px 0 0 rgba(255,255,255,0.06), 0 0 0 1px rgba(216, 109, 252, 0.06)",
 } as const;
 
 type HoverSpot = { cardId: string; x: number; y: number } | null;
@@ -174,7 +174,7 @@ export function CoreCapabilitiesSection() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(30, 40, 72, 0.2) 0%, transparent 55%)",
+              "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(216, 109, 252, 0.07) 0%, transparent 55%)",
           }}
         />
         <div
@@ -242,7 +242,7 @@ export function CoreCapabilitiesSection() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(30, 40, 72, 0.2) 0%, transparent 55%)",
+            "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(216, 109, 252, 0.07) 0%, transparent 55%)",
         }}
       />
       <div
@@ -322,10 +322,10 @@ export function CoreCapabilitiesSection() {
                   scale: 1.015,
                   backgroundColor: "rgba(255,255,255,0.06)",
                   borderColor: card.isHero
-                    ? "rgba(30, 40, 72, 0.6)"
+                    ? "rgba(216, 109, 252, 0.28)"
                     : "rgba(255,255,255,0.14)",
                   boxShadow: card.isHero
-                    ? "inset 0 1px 0 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(30, 40, 72, 0.5), 0 24px 48px -12px rgba(0,0,0,0.4)"
+                    ? "inset 0 1px 0 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(216, 109, 252, 0.2), 0 24px 48px -12px rgba(0,0,0,0.4)"
                     : "inset 0 1px 0 0 rgba(255,255,255,0.06), 0 0 0 1px rgba(255,255,255,0.08), 0 20px 40px -16px rgba(0,0,0,0.35)",
                 }}
                 transition={{ type: "tween", duration: 0.25 }}
@@ -339,7 +339,7 @@ export function CoreCapabilitiesSection() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.15 }}
                     style={{
-                      background: `radial-gradient(circle 50% at ${glowAt.x}% ${glowAt.y}%, ${card.isHero ? "rgba(30,40,72,0.4)" : "rgba(30,40,72,0.25)"}, transparent 70%)`,
+                      background: `radial-gradient(circle 50% at ${glowAt.x}% ${glowAt.y}%, ${card.isHero ? "rgba(216,109,252,0.2)" : "rgba(216,109,252,0.12)"}, transparent 70%)`,
                     }}
                     aria-hidden
                   />

@@ -19,7 +19,7 @@ export function FinalCtaSection() {
 
   const gradientBg = {
     background:
-      "linear-gradient(180deg, #0c0814 0%, #0a0a18 35%, #080c1a 70%, #060814 100%), radial-gradient(ellipse 100% 80% at 50% 40%, rgba(30, 40, 72, 0.4) 0%, transparent 55%), radial-gradient(ellipse 80% 60% at 70% 70%, rgba(30, 58, 138, 0.2) 0%, transparent 50%)",
+      "linear-gradient(180deg, #0c0814 0%, #0a0a18 35%, #080c1a 70%, #060814 100%), radial-gradient(ellipse 100% 80% at 50% 40%, rgba(216, 109, 252, 0.18) 0%, transparent 55%), radial-gradient(ellipse 80% 60% at 70% 70%, rgba(30, 58, 138, 0.2) 0%, transparent 50%)",
   };
 
   if (reducedMotion) {
@@ -51,13 +51,13 @@ export function FinalCtaSection() {
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
             <a
               href="/contact"
-              className="inline-flex min-w-[220px] items-center justify-center border-2 border-(--brand) bg-(--brand) px-8 py-4 text-sm font-semibold tracking-[0.06em] text-white shadow-[0_0_32px_rgba(30,40,72,0.5)] transition-all hover:border-[#2a3560] hover:bg-[#2a3560] hover:shadow-[0_0_40px_rgba(30,40,72,0.6)]"
+              className="inline-flex min-w-[220px] items-center justify-center border-2 border-(--brand) bg-(--brand) px-8 py-4 text-sm font-semibold tracking-[0.06em] text-white shadow-[0_0_32px_rgba(216,109,252,0.35)] transition-all hover:border-[#e08cff] hover:bg-[#e08cff] hover:shadow-[0_0_40px_rgba(216,109,252,0.45)]"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Request a Custom Data Pilot
             </a>
             <a
-              href="/contact"
+              href="#benchmarks"
               className="inline-flex min-w-[220px] items-center justify-center border-2 border-white/35 bg-transparent px-8 py-4 text-sm font-medium tracking-[0.06em] text-white transition-all hover:border-white/60 hover:bg-white/10"
               style={{ fontFamily: "var(--font-inter)" }}
             >
@@ -132,13 +132,13 @@ export function FinalCtaSection() {
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
           <a
             href="/contact"
-            className="inline-flex min-w-[220px] items-center justify-center border-2 border-(--brand) bg-(--brand) px-8 py-4 text-sm font-semibold tracking-[0.06em] text-white shadow-[0_0_32px_rgba(30,40,72,0.5)] transition-all hover:border-[#2a3560] hover:bg-[#2a3560] hover:shadow-[0_0_40px_rgba(30,40,72,0.6)]"
+            className="inline-flex min-w-[220px] items-center justify-center border-2 border-(--brand) bg-(--brand) px-8 py-4 text-sm font-semibold tracking-[0.06em] text-white shadow-[0_0_32px_rgba(216,109,252,0.35)] transition-all hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(216,109,252,0.45)]"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Request a Custom Data Pilot
           </a>
           <a
-            href="/contact"
+            href="#benchmarks"
             className="inline-flex min-w-[220px] items-center justify-center border-2 border-white/35 bg-transparent px-8 py-4 text-sm font-medium tracking-[0.06em] text-white transition-all hover:border-white/60 hover:bg-white/10"
             style={{ fontFamily: "var(--font-inter)" }}
           >
