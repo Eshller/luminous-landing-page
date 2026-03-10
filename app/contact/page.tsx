@@ -102,21 +102,17 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/3hpi189csecyv", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          data: [
-            {
-              firstName: formData.firstName,
-              lastName: formData.lastName,
-              email: formData.email,
-              mobile: formData.mobile,
-              company: formData.company,
-              serviceType: formData.serviceType,
-              consent: formData.consent,
-            },
-          ],
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          mobile: formData.mobile,
+          company: formData.company,
+          serviceType: formData.serviceType,
+          consent: formData.consent,
         }),
       });
       if (!response.ok) throw new Error("Failed to submit");

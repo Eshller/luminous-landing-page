@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const easing = [0.22, 1, 0.36, 1] as const;
@@ -20,6 +22,25 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
       } ${show ? "pointer-events-auto" : "pointer-events-none"}`}
     >
       <div className="flex max-w-2xl flex-col text-left">
+        {/* Logo — brand wordmark */}
+        <motion.div
+          className="mb-6"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: show ? 1 : 0, y: show ? 0 : 12 }}
+          transition={{ duration: 0.6, delay: show ? 0 : 0, ease: easing }}
+        >
+          <Link href="/" className="inline-block focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-transparent rounded">
+            <Image
+              src="/adzzat-logo.png"
+              alt="Adzzat"
+              width={160}
+              height={40}
+              className="h-8 w-auto md:h-10"
+              priority
+              unoptimized
+            />
+          </Link>
+        </motion.div>
         {/* Accent line — editorial detail */}
         <motion.div
           className="mb-6 h-px w-12 bg-(--brand)"
