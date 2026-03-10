@@ -83,7 +83,7 @@ export function TechnicalIntegrationSection() {
     return (
       <section
         ref={sectionRef}
-        className="relative w-full overflow-hidden bg-black px-6 py-24 md:px-14 md:py-32"
+        className="relative w-full overflow-hidden bg-[#050814] px-6 py-24 md:px-14 md:py-32"
         aria-labelledby="integration-heading"
       >
         <div
@@ -132,7 +132,7 @@ export function TechnicalIntegrationSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-black px-6 py-24 md:px-14 md:py-32"
+      className="relative w-full overflow-hidden bg-[#050814] px-6 py-24 md:px-14 md:py-32"
       aria-labelledby="integration-heading"
     >
       <div

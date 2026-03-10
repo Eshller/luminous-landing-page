@@ -91,6 +91,45 @@ const CARDS = [
   },
 ] as const;
 
+const EXTRA_CARDS = [
+  {
+    title: "Multi‑Modal Annotations",
+    body: "High-fidelity labeling across text, code, images, and video for complex evaluation and training regimes.",
+  },
+  {
+    title: "Code‑Gen & Debugging",
+    body: "Curated datasets that teach models to write, analyze, and repair production-grade software systems.",
+  },
+  {
+    title: "Domain‑Specific SFT",
+    body: "Custom supervised fine‑tuning for specialized domains like finance, healthcare, legal, and enterprise SaaS.",
+  },
+  {
+    title: "Advanced Reasoning",
+    body: "Multi-step logical reasoning tracks and hard problem sets that push models beyond benchmark plateaus.",
+  },
+  {
+    title: "Multi‑Turn Conversation",
+    body: "Dialogue workflows that test memory, safety, style, and persona consistency across long-horizon chats.",
+  },
+  {
+    title: "Text‑to‑SQL & Structured I/O",
+    body: "Paired natural language and structured outputs for BI copilots, analytics agents, and data workflows.",
+  },
+  {
+    title: "RAG Training & Eval",
+    body: "Human‑verified retrieval traces and judgments to tune and benchmark retrieval‑augmented generation stacks.",
+  },
+  {
+    title: "Model Evaluation",
+    body: "Human‑in‑the‑loop eval suites that measure correctness, safety, latency trade‑offs, and production fitness.",
+  },
+  {
+    title: "Indic & Multilingual Workflows",
+    body: "Evaluation and training data for Indic languages and other under‑resourced locales your models must support.",
+  },
+] as const;
+
 const CARD_BASE_CLASS =
   "relative flex min-w-0 min-h-0 w-full flex-col self-start rounded-2xl border p-6 text-left overflow-hidden md:p-8 lg:p-10";
 
@@ -167,7 +206,7 @@ export function CoreCapabilitiesSection() {
     return (
       <section
         ref={sectionRef}
-        className="relative w-full overflow-hidden bg-black px-6 py-24 md:px-14 md:py-32"
+        className="relative w-full overflow-hidden bg-[#050814] px-6 py-24 md:px-14 md:py-32"
         aria-labelledby="capabilities-heading"
       >
         <div
@@ -226,6 +265,35 @@ export function CoreCapabilitiesSection() {
               </div>
             ))}
           </div>
+          <div className="mt-14 border-t border-white/10 pt-8">
+            <p
+              className="mb-5 text-[0.6875rem] font-medium uppercase tracking-[0.28em] text-white/50"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
+              Additional capabilities
+            </p>
+            <div className="grid gap-4 text-sm text-white/80 md:grid-cols-3 md:gap-5">
+              {EXTRA_CARDS.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-white/10 bg-white/2 p-4 shadow-[0_16px_40px_rgba(0,0,0,0.6)]"
+                >
+                  <h3
+                    className="text-sm font-semibold tracking-tight text-white md:text-[0.95rem]"
+                    style={{ fontFamily: "var(--font-geist-sans)" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className="mt-2 text-[0.8rem] leading-relaxed text-white/75 md:text-[0.85rem]"
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     );
@@ -234,7 +302,7 @@ export function CoreCapabilitiesSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-black px-6 py-24 md:px-14 md:py-32"
+      className="relative w-full overflow-hidden bg-[#050814] px-6 py-24 md:px-14 md:py-32"
       aria-labelledby="capabilities-heading"
     >
       {/* Ambient — brand orb */}
@@ -365,6 +433,35 @@ export function CoreCapabilitiesSection() {
               </motion.div>
             );
           })}
+        </div>
+        <div className="mt-14 border-t border-white/10 pt-8">
+          <p
+            className="mb-5 text-[0.6875rem] font-medium uppercase tracking-[0.28em] text-white/50"
+            style={{ fontFamily: "var(--font-inter)" }}
+          >
+            Additional capabilities
+          </p>
+          <div className="grid gap-4 text-sm text-white/80 md:grid-cols-3 md:gap-5">
+            {EXTRA_CARDS.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-white/10 bg-white/2 p-4 shadow-[0_16px_40px_rgba(0,0,0,0.6)]"
+              >
+                <h3
+                  className="text-sm font-semibold tracking-tight text-white md:text-[0.95rem]"
+                  style={{ fontFamily: "var(--font-geist-sans)" }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  className="mt-2 text-[0.8rem] leading-relaxed text-white/75 md:text-[0.85rem]"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

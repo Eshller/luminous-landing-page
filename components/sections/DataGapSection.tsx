@@ -60,7 +60,7 @@ export function DataGapSection() {
     return (
       <section
         ref={sectionRef}
-        className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black px-6 py-28 md:px-14 md:py-36"
+        className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#050814] px-6 py-28 md:px-14 md:py-36"
         aria-labelledby="data-gap-heading"
       >
         <div
@@ -88,7 +88,7 @@ export function DataGapSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black px-6 py-28 md:px-14 md:py-36"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#050814] px-6 py-28 md:px-14 md:py-36"
       aria-labelledby="data-gap-heading"
     >
       {/* Section number — editorial */}

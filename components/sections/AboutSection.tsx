@@ -47,21 +47,21 @@ export function AboutSection() {
 
   const contentTransforms = reducedMotion
     ? {
-        overlineOpacity: 1,
-        overlineY: 0,
-        titleOpacity: 1,
-        titleY: 0,
-        gridOpacity: 1,
-        gridY: 0,
-      }
+      overlineOpacity: 1,
+      overlineY: 0,
+      titleOpacity: 1,
+      titleY: 0,
+      gridOpacity: 1,
+      gridY: 0,
+    }
     : {
-        overlineOpacity,
-        overlineY,
-        titleOpacity,
-        titleY,
-        gridOpacity,
-        gridY,
-      };
+      overlineOpacity,
+      overlineY,
+      titleOpacity,
+      titleY,
+      gridOpacity,
+      gridY,
+    };
 
   const gradientBg = {
     background:
@@ -71,7 +71,7 @@ export function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-black px-6 py-24 md:px-14 md:py-32"
+      className="relative w-full overflow-hidden bg-[#050814] px-6 py-24 md:px-14 md:py-32"
       aria-labelledby="about-heading"
     >
       <div
@@ -115,7 +115,7 @@ export function AboutSection() {
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-12 md:gap-14">
         <div className="max-w-2xl">
           <motion.p
-            className="mb-3 text-[0.6875rem] font-medium uppercase tracking-[0.35em] text-[var(--brand)]"
+            className="mb-3 text-[0.6875rem] font-medium uppercase tracking-[0.35em] text-(--brand)"
             style={{
               fontFamily: "var(--font-inter)",
               opacity: contentTransforms.overlineOpacity,
@@ -157,9 +157,9 @@ export function AboutSection() {
           }}
         >
           {TEAM.map((member) => (
-            <div
-              key={member.email}
-              className="relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-5 shadow-[0_20px_40px_rgba(0,0,0,0.65)] md:p-6"
+              <div
+                key={member.email}
+                className="relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/2 p-5 shadow-[0_20px_40px_rgba(0,0,0,0.65)] md:p-6"
             >
               <div
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"

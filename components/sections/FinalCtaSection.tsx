@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -49,13 +50,13 @@ export function FinalCtaSection() {
             Stop gating your foundation model&apos;s potential with commoditized crowdsourcing. Let&apos;s architect a custom data pipeline tailored to your exact evaluation benchmarks.
           </p>
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
-            <a
+            <Link
               href="/contact"
               className="inline-flex min-w-[220px] items-center justify-center border-2 border-(--brand) bg-(--brand) px-8 py-4 text-sm font-semibold tracking-[0.06em] text-white shadow-[0_0_32px_rgba(216,109,252,0.35)] transition-all hover:border-[#e08cff] hover:bg-[#e08cff] hover:shadow-[0_0_40px_rgba(216,109,252,0.45)]"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Request a Custom Data Pilot
-            </a>
+            </Link>
             <a
               href="#benchmarks"
               className="inline-flex min-w-[220px] items-center justify-center border-2 border-white/35 bg-transparent px-8 py-4 text-sm font-medium tracking-[0.06em] text-white transition-all hover:border-white/60 hover:bg-white/10"
@@ -130,13 +131,13 @@ export function FinalCtaSection() {
           Stop gating your foundation model&apos;s potential with commoditized crowdsourcing. Let&apos;s architect a custom data pipeline tailored to your exact evaluation benchmarks.
         </p>
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
-          <a
+          <Link
             href="/contact"
             className="inline-flex min-w-[220px] items-center justify-center border-2 border-(--brand) bg-(--brand) px-8 py-4 text-sm font-semibold tracking-[0.06em] text-white shadow-[0_0_32px_rgba(216,109,252,0.35)] transition-all hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(216,109,252,0.45)]"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Request a Custom Data Pilot
-          </a>
+          </Link>
           <a
             href="#benchmarks"
             className="inline-flex min-w-[220px] items-center justify-center border-2 border-white/35 bg-transparent px-8 py-4 text-sm font-medium tracking-[0.06em] text-white transition-all hover:border-white/60 hover:bg-white/10"

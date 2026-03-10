@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const easing = [0.22, 1, 0.36, 1] as const;
@@ -13,11 +14,10 @@ type HeroOverlayProps = {
 export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
   return (
     <div
-      className={`absolute inset-0 z-10 flex justify-center px-6 pt-12 md:justify-start md:pt-20 md:px-14 lg:px-20 ${
-        staticHero
+      className={`absolute inset-0 z-10 flex justify-center px-6 pt-12 md:justify-start md:pt-20 md:px-14 lg:px-20 ${staticHero
           ? "items-center pb-12 md:items-center md:pb-16"
           : "items-center pb-12 md:items-end md:pb-[clamp(4rem,15vw,10rem)]"
-      } ${show ? "pointer-events-auto" : "pointer-events-none"}`}
+        } ${show ? "pointer-events-auto" : "pointer-events-none"}`}
     >
       <div className="flex max-w-2xl flex-col text-left">
         {/* Accent line — editorial detail */}
@@ -58,7 +58,7 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
           animate={{ opacity: show ? 1 : 0, y: show ? 0 : 12 }}
           transition={{ duration: 0.5, delay: show ? 0.6 : 0, ease: easing }}
         >
-          <a
+          <Link
             href="/contact"
             className="group inline-flex items-center justify-center gap-2.5 border border-white/30 bg-white/5 px-6 py-3.5 text-sm font-medium tracking-[0.08em] text-white backdrop-blur-sm transition-colors hover:border-(--brand) hover:bg-white/10"
             style={{ fontFamily: "var(--font-inter), sans-serif" }}
@@ -67,14 +67,14 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
             <span className="transition-transform group-hover:translate-x-0.5" aria-hidden>
               →
             </span>
-          </a>
-          <a
-            href="#benchmarks"
+          </Link>
+          <Link
+            href="/contact"
             className="inline-flex items-center justify-center rounded border border-white/15 bg-white/3 px-6 py-3.5 text-sm font-medium tracking-[0.06em] text-white/80 backdrop-blur-sm transition-colors hover:border-white/25 hover:bg-white/6 hover:text-white"
             style={{ fontFamily: "var(--font-inter), sans-serif" }}
           >
             Explore Evaluation Benchmarks
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>

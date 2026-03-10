@@ -23,7 +23,7 @@ type ContactSectionProps = {
 export function ContactSection({
   title = "We can turn your frontier AI roadmap into reality",
   mainMessage = "Contact our team",
-  contactEmail = "hello@adzzat.com",
+  contactEmail = "contact@adzzat.com",
   onSubmit,
 }: ContactSectionProps) {
   const [formData, setFormData] = React.useState<ContactFormData>({
@@ -52,28 +52,38 @@ export function ContactSection({
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    try {
-      const response = await fetch("https://sheetdb.io/api/v1/3hpi189csecyv", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          data: [
-            {
-              firstName: formData.firstName,
-              lastName: formData.lastName,
-              email: formData.email,
-              mobile: formData.mobile,
-              company: formData.company,
-              serviceType: formData.serviceType,
-              consent: formData.consent,
-            },
-          ],
-        }),
-      });
+    const payload = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      mobile: formData.mobile,
+      company: formData.company,
+      serviceType: formData.serviceType,
+      consent: formData.consent,
+    };
 
-      if (!response.ok) throw new Error("Failed to submit");
+    try {
+      // Send email (from contact@adzzat.com, CC to team) via our API
+      const emailRes = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!emailRes.ok) {
+        const err = await emailRes.json().catch(() => ({}));
+        throw new Error(err.error || "Failed to send");
+      }
+
+      // Also record in spreadsheet (best-effort)
+      try {
+        await fetch("https://sheetdb.io/api/v1/3hpi189csecyv", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ data: [payload] }),
+        });
+      } catch {
+        // Ignore SheetDB errors; user already succeeded
+      }
 
       setSubmitStatus("success");
       setFormData({
@@ -322,7 +332,7 @@ export function ContactSection({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-2 inline-flex h-11 w-full items-center justify-center rounded-xl bg-[#0A1628] text-sm font-semibold tracking-[0.12em] text-white shadow-lg transition hover:bg-[#1e3a8a] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
+                className="mt-2 inline-flex h-11 w-full items-center justify-center rounded-xl cursor-pointer hover:bg-[#0A1628] text-sm font-semibold tracking-[0.12em] text-white shadow-lg transition bg-[#1e3a8a] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {isSubmitting ? "Submitting…" : "Submit"}
               </button>

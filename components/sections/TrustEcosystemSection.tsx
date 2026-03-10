@@ -37,7 +37,7 @@ export function TrustEcosystemSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-black pt-0 pb-[clamp(4rem,12vw,7rem)]"
+      className="relative overflow-hidden bg-[#050814] pt-0 pb-[clamp(4rem,12vw,7rem)]"
       aria-labelledby="trust-heading"
     >
       {/* Section number — editorial */}
@@ -143,7 +143,7 @@ export function TrustEcosystemSection() {
                 {ECOSYSTEM_ITEMS.map((item) => (
                   <div
                     key={`${copy}-${item.name}`}
-                    className="flex h-[clamp(2rem,4vw,2.75rem)] min-w-[clamp(4rem,10vw,6rem)] flex-shrink-0 items-center justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                className="flex h-[clamp(2rem,4vw,2.75rem)] min-w-[clamp(4rem,10vw,6rem)] shrink-0 items-center justify-center grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
                     title={item.name}
                   >
                     {item.logo ? (
