@@ -59,7 +59,7 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
           transition={{ duration: 0.5, delay: show ? 0.6 : 0, ease: easing }}
         >
           <a
-            href="#contact"
+            href="/contact"
             className="group inline-flex items-center justify-center gap-2.5 border border-white/30 bg-white/5 px-6 py-3.5 text-sm font-medium tracking-[0.08em] text-white backdrop-blur-sm transition-colors hover:border-(--brand) hover:bg-white/10"
             style={{ fontFamily: "var(--font-inter), sans-serif" }}
           >
@@ -69,7 +69,7 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
             </span>
           </a>
           <a
-            href="#benchmarks"
+            href="/contact"
             className="inline-flex items-center justify-center rounded border border-white/15 bg-white/3 px-6 py-3.5 text-sm font-medium tracking-[0.06em] text-white/80 backdrop-blur-sm transition-colors hover:border-white/25 hover:bg-white/6 hover:text-white"
             style={{ fontFamily: "var(--font-inter), sans-serif" }}
           >

@@ -50,14 +50,14 @@ export function FinalCtaSection() {
           </p>
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex min-w-[220px] items-center justify-center border-2 border-(--brand) bg-(--brand) px-8 py-4 text-sm font-semibold tracking-[0.06em] text-white shadow-[0_0_32px_rgba(30,40,72,0.5)] transition-all hover:border-[#2a3560] hover:bg-[#2a3560] hover:shadow-[0_0_40px_rgba(30,40,72,0.6)]"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Request a Custom Data Pilot
             </a>
             <a
-              href="#benchmarks"
+              href="/contact"
               className="inline-flex min-w-[220px] items-center justify-center border-2 border-white/35 bg-transparent px-8 py-4 text-sm font-medium tracking-[0.06em] text-white transition-all hover:border-white/60 hover:bg-white/10"
               style={{ fontFamily: "var(--font-inter)" }}
             >
@@ -131,14 +131,14 @@ export function FinalCtaSection() {
         </p>
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
           <a
-            href="#contact"
+            href="/contact"
             className="inline-flex min-w-[220px] items-center justify-center border-2 border-(--brand) bg-(--brand) px-8 py-4 text-sm font-semibold tracking-[0.06em] text-white shadow-[0_0_32px_rgba(30,40,72,0.5)] transition-all hover:border-[#2a3560] hover:bg-[#2a3560] hover:shadow-[0_0_40px_rgba(30,40,72,0.6)]"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Request a Custom Data Pilot
           </a>
           <a
-            href="#benchmarks"
+            href="/contact"
             className="inline-flex min-w-[220px] items-center justify-center border-2 border-white/35 bg-transparent px-8 py-4 text-sm font-medium tracking-[0.06em] text-white transition-all hover:border-white/60 hover:bg-white/10"
             style={{ fontFamily: "var(--font-inter)" }}
           >
