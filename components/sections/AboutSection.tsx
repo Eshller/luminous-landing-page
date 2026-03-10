@@ -174,6 +174,7 @@ export function AboutSection() {
                     sizes="56px"
                     className="object-cover"
                     priority={false}
+                    unoptimized
                   />
                 </div>
                 <div>
