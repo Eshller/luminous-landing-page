@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const easing = [0.22, 1, 0.36, 1] as const;
@@ -15,10 +16,26 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
   return (
     <div
       className={`absolute inset-0 z-10 flex justify-center px-6 pt-12 md:justify-start md:pt-20 md:px-14 lg:px-20 ${staticHero
-          ? "items-center pb-12 md:items-center md:pb-16"
-          : "items-center pb-12 md:items-end md:pb-[clamp(4rem,15vw,10rem)]"
+        ? "items-center pb-12 md:items-center md:pb-16"
+        : "items-center pb-12 md:items-end md:pb-[clamp(4rem,15vw,10rem)]"
         } ${show ? "pointer-events-auto" : "pointer-events-none"}`}
     >
+      <motion.div
+        className="pointer-events-none absolute left-6 top-6 md:left-14 md:top-8 lg:left-20"
+        initial={{ opacity: 0, y: -6 }}
+        animate={{ opacity: show ? 1 : 0, y: show ? 0 : -6 }}
+        transition={{ duration: 0.45, delay: show ? 0.08 : 0, ease: easing }}
+      >
+        <Image
+          src="/adzzat-logo.png"
+          alt="Adzzat"
+          width={170}
+          height={52}
+          priority
+          className="h-auto w-[150px] sm:w-[170px] md:w-[200px]"
+        />
+      </motion.div>
+
       <div className="flex max-w-2xl flex-col text-left">
         {/* Accent line — editorial detail */}
         <motion.div

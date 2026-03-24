@@ -307,7 +307,7 @@ export function ProprietaryMethodologySection() {
         }}
         aria-hidden
       >
-        04
+        05
       </div>
 
       <motion.div

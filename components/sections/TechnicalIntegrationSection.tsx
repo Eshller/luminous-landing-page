@@ -159,7 +159,7 @@ export function TechnicalIntegrationSection() {
         }}
         aria-hidden
       >
-        05
+        07
       </div>
 
       <motion.div

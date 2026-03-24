@@ -114,7 +114,7 @@ export function CertificationsSection() {
         }}
         aria-hidden
       >
-        02
+        06
       </div>
 
       <div

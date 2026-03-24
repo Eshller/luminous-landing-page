@@ -15,11 +15,11 @@ export default function Home() {
     <main className="min-h-screen w-full max-w-full overflow-x-hidden">
       <HeroScroll />
       <TrustEcosystemSection />
-      <CertificationsSection />
       <DataGapSection />
       <CoreCapabilitiesSection />
       <CustomizationLayersSection />
       <ProprietaryMethodologySection />
+      <CertificationsSection />
       <TechnicalIntegrationSection />
       <AboutSection />
       <FinalCtaSection />
