@@ -39,6 +39,7 @@ export function Loader({ progress }: LoaderProps) {
             width={420}
             height={120}
             priority
+            unoptimized
             className="h-auto w-[min(84vw,420px)]"
           />
         </motion.div>

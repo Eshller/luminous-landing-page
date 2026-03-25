@@ -32,6 +32,7 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
           width={170}
           height={52}
           priority
+          unoptimized
           className="h-auto w-[150px] sm:w-[170px] md:w-[200px]"
         />
       </motion.div>
