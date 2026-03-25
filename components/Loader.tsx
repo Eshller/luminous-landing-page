@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type LoaderProps = {
   progress: number;
@@ -25,26 +26,21 @@ export function Loader({ progress }: LoaderProps) {
       />
 
       <div className="relative z-10 flex flex-col items-center">
-        {/* Wordmark: KLARVE - editorial, one focal point */}
+        {/* Brand logo */}
         <motion.div
           className="mb-12"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span
-            className="select-none text-[clamp(2.25rem,8vw,5rem)] font-semibold tracking-tight"
-            style={{
-              fontFamily: "var(--font-geist-sans), var(--font-inter), sans-serif",
-              background: "linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.88) 52%, rgba(59, 79, 128, 0.96) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              letterSpacing: "-0.04em",
-            }}
-          >
-            KLARVE
-          </span>
+          <Image
+            src="/klarve-ai.png"
+            alt="Klarve"
+            width={420}
+            height={120}
+            priority
+            className="h-auto w-[min(84vw,420px)]"
+          />
         </motion.div>
 
         {/* Progress bar: one thin line */}
