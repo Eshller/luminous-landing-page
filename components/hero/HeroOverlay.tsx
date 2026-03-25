@@ -27,7 +27,7 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
         transition={{ duration: 0.45, delay: show ? 0.08 : 0, ease: easing }}
       >
         <Image
-          src="/adzzat-logo.png"
+          src="/klarve-ai.png"
           alt="Klarve"
           width={170}
           height={52}
