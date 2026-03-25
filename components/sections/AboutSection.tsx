@@ -23,7 +23,7 @@ const TEAM = [
   {
     name: "Eshu",
     role: "CTO",
-    bio: "Founding technical leader architecting Adzzat’s frontier data and infrastructure stack.",
+    bio: "Founding technical leader architecting Klarve’s frontier data and infrastructure stack.",
     email: "eshu@adzzat.com",
     image: "/eshu.jpg",
   },
@@ -133,7 +133,7 @@ export function AboutSection() {
               y: contentTransforms.titleY,
             }}
           >
-            Operating layer for Adzzat&apos;s frontier data engine.
+            Operating layer for Klarve&apos;s frontier data engine.
           </motion.h2>
           <motion.p
             className="mt-5 max-w-xl text-sm text-white/80 md:text-base"
@@ -144,7 +144,7 @@ export function AboutSection() {
             }}
           >
             A lean founding team combining institutional ops, product, and deep
-            engineering experience—responsible for how Adzzat sources, vets, and
+            engineering experience—responsible for how Klarve sources, vets, and
             ships institutional‑grade datasets.
           </motion.p>
         </div>

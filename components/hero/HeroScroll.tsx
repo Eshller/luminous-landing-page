@@ -29,7 +29,7 @@ export function HeroScroll() {
     const t = setTimeout(() => {
       setShowText(true);
       setPhase("showing-text");
-      window.dispatchEvent(new CustomEvent("adzzat-hero-ready"));
+      window.dispatchEvent(new CustomEvent("klarve-hero-ready"));
     }, STATIC_HERO_TEXT_DELAY_MS);
     return () => clearTimeout(t);
   }, [preferStaticHero]);
@@ -54,7 +54,7 @@ export function HeroScroll() {
       if (crossfadeDoneRef.current) return;
       crossfadeDoneRef.current = true;
       setPhase("looping");
-      window.dispatchEvent(new CustomEvent("adzzat-hero-ready"));
+      window.dispatchEvent(new CustomEvent("klarve-hero-ready"));
 
       const loop = loopRef.current;
       if (loop) {

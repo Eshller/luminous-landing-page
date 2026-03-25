@@ -5,7 +5,7 @@ import { LenisProvider } from "@/components/LenisProvider";
 import { LoaderGate } from "@/components/LoaderGate";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ai.adzzat.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ai.klarve.com";
 const OG_IMAGE_PATH = "/og.png";
 
 const geistSans = Geist({
@@ -30,7 +30,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Adzzat | Frontier AI Data for Foundation Models",
+  title: "Klarve | Frontier AI Data for Foundation Models",
   description:
     "Expert-curated datasets for complex reasoning and agentic workflows. Pipeline-ready data for Y-Combinator backed labs—RLHF, SFT, agentic traces, and simulation environments. DPDP compliant.",
   keywords: [
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
     "RLHF",
     "agentic workflows",
     "ML data",
-    "Adzzat",
+    "Klarve",
   ],
-  authors: [{ name: "Adzzat" }],
+  authors: [{ name: "Klarve" }],
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "Adzzat",
-    title: "Adzzat | Frontier AI Data for Foundation Models",
+    siteName: "Klarve",
+    title: "Klarve | Frontier AI Data for Foundation Models",
     description:
       "Expert-curated datasets for complex reasoning and agentic workflows. Pipeline-ready data for YC-backed labs—RLHF, SFT, agentic traces, simulation. DPDP compliant.",
     images: [
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
         url: OG_IMAGE_PATH.startsWith("http") ? OG_IMAGE_PATH : `${SITE_URL}${OG_IMAGE_PATH}`,
         width: 1200,
         height: 630,
-        alt: "Adzzat - Frontier AI Data",
+        alt: "Klarve - Frontier AI Data",
       },
     ],
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adzzat | Frontier AI Data for Foundation Models",
+    title: "Klarve | Frontier AI Data for Foundation Models",
     description:
       "Expert-curated datasets for complex reasoning and agentic workflows. Pipeline-ready data for YC-backed labs. DPDP compliant.",
     images: [OG_IMAGE_PATH.startsWith("http") ? OG_IMAGE_PATH : `${SITE_URL}${OG_IMAGE_PATH}`],

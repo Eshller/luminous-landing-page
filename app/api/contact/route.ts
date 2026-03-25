@@ -87,7 +87,7 @@ export async function POST(request: Request) {
   try {
     // Internal notification (to team, CC)
     await transporter.sendMail({
-      from: `"Adzzat Contact" <${FROM_EMAIL}>`,
+      from: `"Klarve Contact" <${FROM_EMAIL}>`,
       to: FROM_EMAIL,
       cc: CC_EMAILS,
       replyTo: email,
@@ -97,13 +97,13 @@ export async function POST(request: Request) {
 
     // Confirmation email to the person who submitted the form
     await transporter.sendMail({
-      from: `"Adzzat" <${FROM_EMAIL}>`,
+      from: `"Klarve" <${FROM_EMAIL}>`,
       to: email,
-      subject: "Thanks for reaching out to Adzzat",
+      subject: "Thanks for reaching out to Klarve",
       text: [
         `Hi ${firstName || "there"},`,
         "",
-        "Thanks for contacting Adzzat. We've received your details and someone from the team will follow up shortly.",
+        "Thanks for contacting Klarve. We've received your details and someone from the team will follow up shortly.",
         "",
         "Summary of what you shared:",
         `• Name: ${firstName} ${lastName}`.trim(),
@@ -114,7 +114,7 @@ export async function POST(request: Request) {
         "",
         "If anything is missing or you'd like to share more context, you can simply reply to this email.",
         "",
-        "— Adzzat team",
+        "— Klarve team",
       ].join("\n"),
     });
   } catch (err) {

@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div className="space-y-3 max-w-sm">
           <p className="text-xs font-semibold tracking-[0.28em] text-white/40">
-            ADZZAT
+            KLARVE
           </p>
           <p className="text-sm text-white/75">
             Expert-curated evaluation and training data for foundation models.
@@ -49,7 +49,7 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-1.5 text-sm">
               <a
-                href="https://www.linkedin.com/company/adzzat/"
+                href="https://www.linkedin.com/company/klarve/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white"
@@ -68,7 +68,7 @@ export function Footer() {
       </div>
 
       <div className="mx-auto mt-8 flex max-w-6xl flex-col-reverse items-start justify-between gap-4 border-t border-white/10 pt-4 text-[11px] text-white/40 md:flex-row md:items-center">
-        <p>© {new Date().getFullYear()} Adzzat. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Klarve. All rights reserved.</p>
         <p className="max-w-md">
           Built for frontier AI teams that need high-signal human evaluation and
           training data, not commoditized crowdsourcing.

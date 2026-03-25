@@ -25,7 +25,7 @@ export function Loader({ progress }: LoaderProps) {
       />
 
       <div className="relative z-10 flex flex-col items-center">
-        {/* Wordmark: ADZZAT - editorial, one focal point */}
+        {/* Wordmark: KLARVE - editorial, one focal point */}
         <motion.div
           className="mb-12"
           initial={{ opacity: 0, y: 12 }}
@@ -43,7 +43,7 @@ export function Loader({ progress }: LoaderProps) {
               letterSpacing: "-0.04em",
             }}
           >
-            ADZZAT
+            KLARVE
           </span>
         </motion.div>
 

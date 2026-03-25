@@ -15,7 +15,7 @@ export default function TermsPage() {
             className="text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.1] tracking-tight"
             style={{ fontFamily: "var(--font-geist-sans)" }}
           >
-            Use of the Adzzat website.
+            Use of the Klarve website.
           </h1>
           <p
             className="max-w-2xl text-sm leading-relaxed text-white/75 md:text-base"
@@ -36,9 +36,9 @@ export default function TermsPage() {
               1. Informational purpose only
             </h2>
             <p style={{ fontFamily: "var(--font-inter)" }}>
-              The Adzzat website is provided for general information about our company
+              The Klarve website is provided for general information about our company
               and services. Nothing on this site constitutes an offer, commitment, or
-              guarantee of service. Any commercial engagement with Adzzat will be
+              guarantee of service. Any commercial engagement with Klarve will be
               governed by a separate written agreement.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function TermsPage() {
             </h2>
             <p style={{ fontFamily: "var(--font-inter)" }}>
               All content on this site—including copy, visuals, and branding—is owned by
-              or licensed to Adzzat and protected by applicable intellectual property
+              or licensed to Klarve and protected by applicable intellectual property
               laws. You may not reuse, modify, or redistribute this content without our
               prior written consent, except for fair use or as otherwise permitted by
               law.

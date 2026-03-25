@@ -28,7 +28,7 @@ export function HeroOverlay({ show, staticHero = false }: HeroOverlayProps) {
       >
         <Image
           src="/adzzat-logo.png"
-          alt="Adzzat"
+          alt="Klarve"
           width={170}
           height={52}
           priority

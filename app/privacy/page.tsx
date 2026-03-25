@@ -15,7 +15,7 @@ export default function PrivacyPage() {
             className="text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.1] tracking-tight"
             style={{ fontFamily: "var(--font-geist-sans)" }}
           >
-            How Adzzat handles your data.
+            How Klarve handles your data.
           </h1>
           <p
             className="max-w-2xl text-sm leading-relaxed text-white/75 md:text-base"
@@ -53,7 +53,7 @@ export default function PrivacyPage() {
             </h2>
             <p style={{ fontFamily: "var(--font-inter)" }}>
               We use contact information to respond to inquiries, schedule
-              conversations, and share relevant information about Adzzat&apos;s products
+              conversations, and share relevant information about Klarve&apos;s products
               and services. Usage metadata helps us improve the website, debug issues,
               and prioritize future product work.
             </p>
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
               5. Changes to this policy
             </h2>
             <p style={{ fontFamily: "var(--font-inter)" }}>
-              As Adzzat grows, this policy will be updated to reflect new products,
+              As Klarve grows, this policy will be updated to reflect new products,
               regions, and regulatory expectations. When we make material changes, we
               will update the effective date and, where appropriate, surface a clear
               notice on the site.

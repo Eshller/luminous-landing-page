@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const STORAGE_KEY = "adzzat-dpdp-consent";
-const HERO_READY_EVENT = "adzzat-hero-ready";
+const STORAGE_KEY = "klarve-dpdp-consent";
+const HERO_READY_EVENT = "klarve-hero-ready";
 export type ConsentLevel = "all" | "essential" | null;
 
 function getStoredConsent(): ConsentLevel {
