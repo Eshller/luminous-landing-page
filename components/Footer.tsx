@@ -14,7 +14,7 @@ export function Footer() {
             Expert-curated evaluation and training data for foundation models.
           </p>
           <div className="mt-4 space-y-1 text-xs text-white/60">
-            <p>contact@adzzat.com</p>
+            <p>contact@klarve.ai</p>
             <p>Bay Area · Mumbai</p>
           </div>
         </div>

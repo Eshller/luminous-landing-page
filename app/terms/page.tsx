@@ -100,10 +100,10 @@ export default function TermsPage() {
               If you have questions about these sample terms or would like to discuss a
               formal engagement, please reach out to{" "}
               <a
-                href="mailto:contact@adzzat.com"
+                href="mailto:contact@klarve.ai"
                 className="text-(--brand) underline-offset-4 hover:underline"
               >
-                contact@adzzat.com
+                contact@klarve.ai
               </a>
               .
             </p>

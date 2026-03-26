@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const FROM_EMAIL = "contact@adzzat.com";
+const FROM_EMAIL = "contact@klarve.ai";
 const CC_EMAILS = [
-  "nabeel@adzzat.com",
-  "aryanhonawar@adzzat.com",
-  "eshu@adzzat.com",
+  "nabeel@klarve.ai",
+  "aryanhonawar@klarve.ai",
+  "eshu@klarve.ai",
 ];
 
 type ContactBody = {

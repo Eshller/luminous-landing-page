@@ -86,10 +86,10 @@ export default function PrivacyPage() {
               If you&apos;d like to access, correct, or delete information we hold about
               you, please reach out to{" "}
               <a
-                href="mailto:contact@adzzat.com"
+                href="mailto:contact@klarve.ai"
                 className="text-(--brand) underline-offset-4 hover:underline"
               >
-                contact@adzzat.com
+                contact@klarve.ai
               </a>
               . We&apos;ll do our best to respond promptly, subject to applicable legal
               requirements.

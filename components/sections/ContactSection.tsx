@@ -23,7 +23,7 @@ type ContactSectionProps = {
 export function ContactSection({
   title = "We can turn your frontier AI roadmap into reality",
   mainMessage = "Contact our team",
-  contactEmail = "contact@klarve.com",
+  contactEmail = "contact@klarve.ai",
   onSubmit,
 }: ContactSectionProps) {
   const [formData, setFormData] = React.useState<ContactFormData>({
@@ -63,7 +63,7 @@ export function ContactSection({
     };
 
     try {
-      // Send email (from contact@klarve.com, CC to team) via our API
+      // Send email (from contact@klarve.ai, CC to team) via our API
       const emailRes = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
