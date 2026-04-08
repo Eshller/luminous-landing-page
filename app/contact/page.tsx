@@ -1,7 +1,15 @@
-"use client";
-
+import type { Metadata } from "next";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FAQSection } from "@/components/sections/FAQSection";
+
+export const metadata: Metadata = {
+  title: "Contact | Klarve — Schedule a Data Architecture Consultation",
+  description:
+    "Get in touch with Klarve to discuss your AI training data needs, evaluation goals, and custom data pipeline requirements. We respond within 1-2 business days.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 const FAQ_ITEMS = [
   {
@@ -52,15 +60,27 @@ const FAQ_ITEMS = [
 ];
 
 export default function ContactPage() {
-  const handleFormSubmit = (data: unknown) => {
-    console.log("Contact form submitted", data);
-  };
-
   return (
     <main className="min-h-screen w-full bg-white text-slate-900">
-      <ContactSection onSubmit={handleFormSubmit} />
+      <ContactSection />
       <FAQSection items={FAQ_ITEMS} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQ_ITEMS.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
+          }),
+        }}
+      />
     </main>
   );
 }
-

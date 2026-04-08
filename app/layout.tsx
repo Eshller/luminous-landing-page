@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display, Inter } from "next/font/google";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { LenisProvider } from "@/components/LenisProvider";
-import { LoaderGate } from "@/components/LoaderGate";
 import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ai.klarve.com";
@@ -66,7 +65,11 @@ export const metadata: Metadata = {
       "Expert-curated datasets for complex reasoning and agentic workflows. Pipeline-ready data for YC-backed labs. DPDP compliant.",
     images: [OG_IMAGE_PATH.startsWith("http") ? OG_IMAGE_PATH : `${SITE_URL}${OG_IMAGE_PATH}`],
   },
+  alternates: {
+    canonical: SITE_URL,
+  },
   robots: { index: true, follow: true },
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -99,12 +102,32 @@ export default function RootLayout({
 })();`,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Klarve",
+              url: SITE_URL,
+              logo: `${SITE_URL}/klarve-ai.png`,
+              description:
+                "Expert-curated datasets for complex reasoning and agentic workflows. Pipeline-ready data for frontier AI labs.",
+              sameAs: ["https://www.linkedin.com/company/klarve/"],
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "contact@klarve.ai",
+                contactType: "sales",
+              },
+            }),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${inter.variable} antialiased dark overflow-x-hidden`}
       >
         <LenisProvider>
-          <LoaderGate>{children}</LoaderGate>
+          {children}
           <ConsentBanner />
         </LenisProvider>
       </body>

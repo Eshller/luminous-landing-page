@@ -36,6 +36,7 @@ export function TrustEcosystemSection() {
 
   return (
     <section
+      id="benchmarks"
       ref={sectionRef}
       className="relative overflow-hidden bg-[#050814] pt-0 pb-[clamp(4rem,12vw,7rem)]"
       aria-labelledby="trust-heading"
@@ -112,14 +113,14 @@ export function TrustEcosystemSection() {
 
         {/* Copy block */}
         <div className="mx-auto max-w-[52ch] px-6 text-center md:px-10">
-          <p
+          <h2
             id="trust-heading"
-            className="text-[clamp(1rem,2vw,1.25rem)] leading-relaxed text-white/85"
+            className="text-[clamp(1rem,2vw,1.25rem)] leading-relaxed text-white/85 font-normal"
             style={{ fontFamily: "var(--font-inter), sans-serif" }}
           >
             Delivering proprietary data for Y-Combinator backed labs and stealth
             foundation models. Formatted natively for:
-          </p>
+          </h2>
         </div>
 
         {/* Ecosystem logo marquee */}

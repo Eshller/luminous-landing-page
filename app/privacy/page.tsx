@@ -1,4 +1,13 @@
-"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Klarve",
+  description:
+    "How Klarve handles your data. Learn about the information we collect, how we use it, and your choices regarding your personal data.",
+  alternates: {
+    canonical: "/privacy",
+  },
+};
 
 export default function PrivacyPage() {
   return (

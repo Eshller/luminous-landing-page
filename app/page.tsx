@@ -10,9 +10,22 @@ import { TechnicalIntegrationSection } from "@/components/sections/TechnicalInte
 import { TrustEcosystemSection } from "@/components/sections/TrustEcosystemSection";
 import { Footer } from "@/components/Footer";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ai.klarve.com";
+
 export default function Home() {
   return (
-    <main className="min-h-screen w-full max-w-full overflow-x-hidden">
+    <main id="top" className="min-h-screen w-full max-w-full overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Klarve",
+            url: SITE_URL,
+          }),
+        }}
+      />
       <HeroScroll />
       <TrustEcosystemSection />
       <DataGapSection />

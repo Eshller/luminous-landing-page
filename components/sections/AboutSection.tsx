@@ -70,6 +70,7 @@ export function AboutSection() {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="relative w-full overflow-hidden bg-[#050814] px-6 py-24 md:px-14 md:py-32"
       aria-labelledby="about-heading"
