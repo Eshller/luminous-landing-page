@@ -71,11 +71,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   manifest: "/site.webmanifest",
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
     apple: "/apple-touch-icon.png",
   },
 };
@@ -88,6 +83,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Favicons: light-mode gets dark/blue icon, dark-mode gets white icon */}
+        <link rel="icon" href="/favicon-light.ico" sizes="any" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/favicon-light-16x16.png" sizes="16x16" type="image/png" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/favicon-light-32x32.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: light)" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon-light.png" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/favicon.ico" sizes="any" media="(prefers-color-scheme: dark)" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" media="(prefers-color-scheme: dark)" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: dark)" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" media="(prefers-color-scheme: dark)" />
+
         {/* Apply theme before paint (prevents flash) - defaults to dark */}
         <script
           dangerouslySetInnerHTML={{
