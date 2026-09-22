@@ -25,7 +25,7 @@ export const ROLES: readonly Role[] = [
     slug: "applied-ai-evaluation-research-engineer",
     title: "Applied AI / Evaluation Research Engineer",
     team: "Research",
-    location: "India — Mumbai or Bengaluru",
+    location: "India — Mumbai",
     type: "Full-time",
     summary:
       "Find where models and agents break, then build the evaluations that prove it. You'll design benchmarks and graders, run experiments across proprietary and open models, and turn the failures you uncover into datasets and training environments for AI labs and enterprises.",
@@ -46,7 +46,7 @@ export const ROLES: readonly Role[] = [
     slug: "founding-product-ai-infrastructure-engineer",
     title: "Founding Product / AI Infrastructure Engineer",
     team: "Engineering",
-    location: "India — Mumbai or Bengaluru",
+    location: "India — Mumbai",
     type: "Full-time",
     summary:
       "Turn research capability into product customers can use. You'll work directly with the founders on evaluation dashboards, routing and inference infrastructure, APIs, model integrations and human-in-the-loop systems — owning features from rough idea through to production.",
