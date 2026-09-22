@@ -4,68 +4,16 @@ import { Footer } from "@/components/site/Footer";
 import { Container, Section } from "@/components/site/Container";
 import { ButtonLink } from "@/components/site/Button";
 import { Reveal } from "@/components/site/Reveal";
+import { RoleEntry } from "@/components/careers/RoleEntry";
+import { ROLES, ROLE_COUNT } from "@/lib/careers";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Careers — Adzzat Labs",
   description:
-    "Engineering, operations, and research roles building AI evaluation and deployment infrastructure at Adzzat Labs.",
+    "Research, engineering, operations, revenue and talent roles building AI evaluation and human-data infrastructure at Adzzat Labs.",
   alternates: { canonical: "/careers" },
 };
-
-const CATEGORIES = [
-  {
-    name: "Engineering",
-    roles: [
-      "Software Engineer — Platform/Applied AI (Fullstack)",
-      "Software Engineering Intern",
-      "Senior Software Engineer — Infrastructure",
-      "Senior Software Engineer — Security/Infrastructure",
-      "Software Engineer — Routing Infrastructure",
-      "Machine Learning Engineer — Quality Intelligence",
-      "Staff Platform Engineer — Applied AI",
-    ],
-  },
-  {
-    name: "Growth",
-    roles: [
-      "Growth Associate",
-      "Contractor Relations Specialist",
-      "Head of Expert Marketplace / Technical GM",
-      "Head of Growth",
-    ],
-  },
-  {
-    name: "Internal Ops",
-    roles: [
-      "Business Operations Generalist",
-      "People Programs Lead",
-      "Business Talent Acquisition Lead",
-      "Technical Recruiter",
-      "Talent Coordinator",
-      "People Operations Lead",
-    ],
-  },
-  {
-    name: "Operations",
-    roles: [
-      "Strategic Projects Lead",
-      "Strategic Projects Lead — Coding",
-      "Strategic Projects Associate — Coding",
-      "Strategic Projects Lead — Healthcare",
-    ],
-  },
-  {
-    name: "Research",
-    roles: ["Research Scientist — Post Training"],
-  },
-  {
-    name: "Revenue",
-    roles: ["Marketing Lead", "GTM Operations Lead", "Engagement Manager"],
-  },
-] as const;
-
-const TOTAL_ROLES = CATEGORIES.reduce((sum, category) => sum + category.roles.length, 0);
 
 export default function CareersPage() {
   return (
@@ -77,35 +25,61 @@ export default function CareersPage() {
             <Reveal>
               <h1 className="t-display">Shape how AI learns.</h1>
               <p className="t-lead mt-5">
-                We&rsquo;re hiring across engineering, operations, and research to build the
-                evaluation and deployment infrastructure reliable AI depends on.
+                We&rsquo;re hiring across research, engineering, operations and revenue to build the
+                evaluation and human-data infrastructure reliable AI depends on.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3">
                 <ButtonLink href={`mailto:${CONTACT_EMAIL}?subject=Application`} external>
                   Apply by email
                 </ButtonLink>
-                <span className="t-meta">{TOTAL_ROLES} open roles</span>
+                <span className="t-meta">{ROLE_COUNT} open roles</span>
               </div>
             </Reveal>
           </Container>
         </section>
 
-        <Section tone="alt">
+        <Section tone="alt" className="py-12 sm:py-14">
           <Container>
-            {CATEGORIES.map((category, index) => (
-              <Reveal key={category.name} delay={Math.min(index, 4) * 0.04}>
-                <section className="grid gap-4 border-t border-rule py-8 sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-10">
-                  <h2 className="t-h3">{category.name}</h2>
-                  <ul className="space-y-3">
-                    {category.roles.map((role) => (
-                      <li key={role} className="text-[15px] font-medium leading-snug text-ink/80">
-                        {role}
-                      </li>
-                    ))}
-                  </ul>
-                </section>
+            <Reveal>
+              <h2 className="t-eyebrow">Open roles</h2>
+              <ul className="mt-5 space-y-3">
+                {ROLES.map((role) => (
+                  <li key={role.slug}>
+                    <a
+                      href={`#${role.slug}`}
+                      className="group flex flex-wrap items-baseline gap-x-3 gap-y-1 text-[15px] font-medium leading-snug text-ink/80 transition-opacity duration-150 hover:opacity-60"
+                    >
+                      <span className="underline underline-offset-4">{role.title}</span>
+                      <span className="t-meta">{role.location}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </Container>
+        </Section>
+
+        <Section>
+          <Container>
+            {ROLES.map((role, index) => (
+              <Reveal key={role.slug} delay={Math.min(index, 4) * 0.04}>
+                <RoleEntry role={role} />
               </Reveal>
             ))}
+          </Container>
+        </Section>
+
+        <Section tone="alt">
+          <Container width="text">
+            <Reveal>
+              <h2 className="t-h3">How we hire</h2>
+              <p className="t-small mt-3">
+                Apply by email with whatever best shows your work &mdash; a CV, a GitHub profile, a
+                paper, a shipped system. For research and engineering roles we weigh evidence of
+                work over pedigree. If there&rsquo;s a fit, we&rsquo;ll send you a short,
+                role-specific exercise before we take up much of your time.
+              </p>
+            </Reveal>
           </Container>
         </Section>
 
