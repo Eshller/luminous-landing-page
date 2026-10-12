@@ -12,6 +12,7 @@ const ROUTES: ReadonlyArray<{
   { path: "", priority: 1, changeFrequency: "weekly" },
   { path: "/products", priority: 0.9, changeFrequency: "monthly" },
   { path: "/for-enterprises", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/enterprise-data", priority: 0.9, changeFrequency: "monthly" },
   { path: "/research", priority: 0.8, changeFrequency: "weekly" },
   { path: "/datasets", priority: 0.8, changeFrequency: "weekly" },
   { path: "/careers", priority: 0.7, changeFrequency: "weekly" },

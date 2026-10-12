@@ -28,6 +28,7 @@ export const FOOTER_COLUMNS = [
     links: [
       { href: "/research", label: "Research & Blog" },
       { href: "/datasets", label: "Datasets" },
+      { href: "/enterprise-data", label: "Enterprise Data" },
     ],
   },
   {

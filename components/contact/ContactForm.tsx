@@ -28,6 +28,7 @@ const CHALLENGES = [
   "Model reliability in production",
   "Evaluation for a specific domain",
   "Custom training datasets",
+  "Enterprise data partnership",
   "RL environments and reward design",
   "Something else",
 ] as const;

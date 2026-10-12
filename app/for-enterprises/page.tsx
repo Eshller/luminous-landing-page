@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import { Container, Section } from "@/components/site/Container";
 import { Banner } from "@/components/site/Cards";
 import { Reveal } from "@/components/site/Reveal";
+import { TextLink } from "@/components/site/Button";
 
 export const metadata: Metadata = {
   title: "Enterprise AI Infrastructure — Adzzat Labs",
@@ -53,6 +54,9 @@ export default function ForEnterprisesPage() {
                 Production AI systems demand production-grade reliability. We provide the evaluation
                 infrastructure and routing intelligence that enterprise deployments require.
               </p>
+              <div className="mt-7">
+                <TextLink href="/enterprise-data">Explore enterprise data partnerships</TextLink>
+              </div>
             </Reveal>
           </Container>
         </section>
