@@ -6,6 +6,8 @@ import { Container, Section } from "@/components/site/Container";
 import { ButtonLink, TextLink } from "@/components/site/Button";
 import { Figure } from "@/components/site/Figure";
 import { Reveal } from "@/components/site/Reveal";
+import { DataEstimator } from "@/components/enterprise-data/DataEstimator";
+import { PartnershipProcess } from "@/components/enterprise-data/PartnershipProcess";
 import { DataExplorer } from "@/components/enterprise-data/DataExplorer";
 
 const TITLE = "Enterprise Data Partnerships — Adzzat Labs";
@@ -30,19 +32,13 @@ export const metadata: Metadata = {
   },
 };
 
-const STEPS = [
-  { title: "Explore the fit", text: "Start with a conversation about your business, the records you hold, and where that knowledge could be useful. No data upload is needed to begin." },
-  { title: "Define the partnership", text: "Review ownership, permissions, exclusions, and commercial terms. Agree what can be used, for which purposes, and under what conditions." },
-  { title: "Prepare with care", text: "Scope privacy review, redaction, and quality checks around the agreed data. Preserve useful context while addressing sensitive information." },
-  { title: "Deliver for the agreed use", text: "Prepare the approved material for training or evaluation, with documented provenance and delivery requirements defined by the partnership." },
-] as const;
-
 const FAQS = [
+  { question: "When would we be paid?", answer: "Payment amounts, acceptance criteria, and timing are agreed before delivery. Any payment follows those contractual milestones. Additional datasets or future updates would need their own agreed scope and commercial terms; recurring revenue is not automatic." },
   { question: "What is an enterprise data partnership?", answer: "A scoped arrangement to license business records for agreed AI training or evaluation uses. The conversation starts with the knowledge in your organization, whether you have the rights to license it, and how it might meet a research need." },
   { question: "What kinds of data could be relevant?", answer: "Operational records that capture context, decisions, and outcomes: engineering documents, support histories, internal knowledge, and business workflows. A record that explains why a decision was made can be more useful than a large volume of disconnected information." },
   { question: "Do we need to share data to start the conversation?", answer: "No. Start with a high-level description of your organization and the types of records you hold. Do not send raw records, personal information, or confidential material through the enquiry form. Any later sample review or access should be agreed separately." },
   { question: "How are sensitive information and permissions handled?", answer: "The proposed scope needs an ownership and permissions review, together with explicit exclusions and dataset-specific privacy requirements. Redaction, anonymization, or other preparation depends on the material and intended use. Removing direct identifiers alone does not guarantee that a dataset is anonymous." },
-  { question: "What determines the commercial terms?", answer: "Relevance to the research task, depth of context, quality, uniqueness, and the rights available all matter. Terms are assessed for each partnership; there is no standard payout or guaranteed valuation." },
+  { question: "What determines the commercial terms?", answer: "Relevance to the research task, depth of context, quality, uniqueness, and the rights available all matter. Terms are assessed for each partnership; there is no standard payout or guaranteed valuation. The calculator uses transparent demonstration assumptions and does not quote an actual price." },
   { question: "Can an AI lab request a particular type of data?", answer: "Yes. Tell us the domain, capability, or evaluation gap you are working on. We can discuss the data characteristics and expert input the project would need, then explore the fit with potential sources." },
 ] as const;
 
@@ -61,10 +57,10 @@ export default function EnterpriseDataPage() {
               </div>
               <div className="grid items-end gap-8 lg:grid-cols-[1.5fr_0.7fr] lg:gap-16">
                 <div>
-                  <h1 className="t-display max-w-[20ch]">Your everyday work.<br />AI&rsquo;s next frontier.</h1>
+                  <h1 className="t-display max-w-[20ch]">Your company&rsquo;s data may be worth more than you think.</h1>
                   <p className="t-lead mt-6 max-w-[43ch]">
                     Years of decisions, expertise, and experience live inside your business.
-                    Put that knowledge to work for the next generation of AI.
+                    Explore how licensing that knowledge could create a new source of revenue and help build the next generation of AI.
                   </p>
                 </div>
                 <p className="max-w-[34ch] text-sm leading-[1.7] text-ink/70 lg:pb-1">
@@ -74,7 +70,7 @@ export default function EnterpriseDataPage() {
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <ButtonLink href="/get-started">Explore a partnership <span aria-hidden="true" className="arrow-nudge">&#8599;</span></ButtonLink>
-                <ButtonLink href="#how-it-works" variant="ghost">How it works <span aria-hidden="true">&#8595;</span></ButtonLink>
+                <ButtonLink href="#data-estimator" variant="ghost">Estimate the potential <span aria-hidden="true">&#8595;</span></ButtonLink>
               </div>
             </Reveal>
 
@@ -132,6 +128,18 @@ export default function EnterpriseDataPage() {
                 </p>
               </div>
               <DataExplorer />
+              <div className="mt-14 border-t border-rule pt-8">
+                <h3 className="font-serif text-2xl">Start with the systems your team already uses.</h3>
+                <p className="mt-3 max-w-[65ch] text-sm leading-[1.75] text-ink/70">These are examples of potential sources, not requests for unrestricted access. Only records you have the rights to license belong in an agreed package.</p>
+                <dl className="mt-8 grid gap-x-10 gap-y-7 sm:grid-cols-2">
+                  {[
+                    ["Team conversations", "Slack, Teams, or other internal discussions that show how work moves from question to resolution."],
+                    ["Email & calendars", "Business correspondence and project coordination, reviewed for permissions and sensitive information."],
+                    ["Documents & files", "Design briefs, reports, spreadsheets, and knowledge bases with useful context and provenance."],
+                    ["Business systems", "Approved CRM, support, and operational records that connect a task to a decision and outcome."],
+                  ].map(([title, text]) => <div key={title} className="border-t border-rule pt-5"><dt className="font-medium text-sm">{title}</dt><dd className="mt-3 text-sm leading-[1.75] text-ink/65">{text}</dd></div>)}
+                </dl>
+              </div>
             </Reveal>
           </Container>
         </Section>
@@ -141,23 +149,29 @@ export default function EnterpriseDataPage() {
             <Reveal>
               <p className="text-xs text-ink/65">03 / A considered path to partnership</p>
               <div className="mt-5 flex flex-wrap items-end justify-between gap-6">
-                <h2 className="t-h2">A conversation first.<br />A clear scope at every step.</h2>
+                <h2 className="t-h2">How a data partnership works.</h2>
                 <TextLink href="/get-started">Talk to our team</TextLink>
               </div>
-              <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
-                {STEPS.map((step, index) => (
-                  <li key={step.title} className="border-t border-rule-strong pt-5">
-                    <span className="font-mono text-xs text-ink/55">0{index + 1}</span>
-                    <h3 className="mt-6 font-serif text-2xl leading-tight">{step.title}</h3>
-                    <p className="mt-4 text-sm leading-[1.7] text-ink/70">{step.text}</p>
-                  </li>
-                ))}
-              </ol>
+              <p className="mt-6 max-w-[64ch] text-[15px] leading-[1.75] text-ink/70">From the first conversation to an approved licensing package, establish what can be shared, how it will be prepared, and when payment is due.</p>
+              <PartnershipProcess />
             </Reveal>
           </Container>
         </Section>
 
-        <Section id="partnership-principles">
+        <Section id="partner-fit">
+          <Container>
+            <div className="grid gap-8 md:grid-cols-[0.9fr_1.3fr] md:gap-20">
+              <div><p className="text-xs text-ink/65">Who this is for</p><h2 className="t-h2 mt-5">Established workflows.<br />Knowledge worth sharing.</h2></div>
+              <div className="space-y-6 text-sm leading-[1.75] text-ink/70">
+                <p>We want to hear from businesses with a history of real operational work, records that preserve useful context, and a team able to review the rights and permissions involved.</p>
+                <p>A good starting point is a decision-maker who knows the business, a clear view of the available records, and agreement on what must stay outside the partnership. You do not need to send raw data to find out whether there is a fit.</p>
+                <TextLink href="/get-started">Explore your company&rsquo;s fit</TextLink>
+              </div>
+            </div>
+          </Container>
+        </Section>
+
+        <Section id="partnership-principles" tone="alt">
           <Container>
             <div className="grid gap-10 md:grid-cols-[0.9fr_1.3fr] md:gap-20">
               <Reveal>
@@ -177,6 +191,17 @@ export default function EnterpriseDataPage() {
                 </dl>
               </Reveal>
             </div>
+          </Container>
+        </Section>
+
+        <Section id="data-estimator">
+          <Container>
+            <p className="text-xs text-ink/65">05 / Explore the potential</p>
+            <div className="mt-5 grid gap-6 md:grid-cols-[1fr_1fr] md:gap-16">
+              <h2 className="t-h2">What could your<br />data be worth?</h2>
+              <p className="max-w-[48ch] text-[15px] leading-[1.75] text-ink/70">Adjust your team size, available history, and source coverage to explore an illustrative licensing scenario. A conversation with our team is the next step toward a real assessment.</p>
+            </div>
+            <DataEstimator />
           </Container>
         </Section>
 

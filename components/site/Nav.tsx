@@ -33,12 +33,12 @@ export function Nav() {
       <div className="mx-auto flex h-[var(--nav-clearance)] max-w-[1280px] items-center gap-6 px-6 sm:px-8">
         <Logo />
 
-        <nav className="hidden flex-1 justify-center gap-8 lg:flex">
+        <nav className="hidden flex-1 justify-center gap-4 xl:gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="link-underline text-sm font-medium text-ink"
+              className="link-underline whitespace-nowrap text-sm font-medium text-ink"
             >
               {link.label}
             </Link>

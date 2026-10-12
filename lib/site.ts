@@ -20,6 +20,7 @@ export const NAV_LINKS = [
   { href: "/research", label: "Research & Blog" },
   { href: "/products", label: "Products" },
   { href: "/for-enterprises", label: "For Enterprises" },
+  { href: "/enterprise-data", label: "Data Partnerships" },
 ] as const;
 
 export const FOOTER_COLUMNS = [

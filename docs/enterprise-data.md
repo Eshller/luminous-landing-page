@@ -24,3 +24,10 @@ Use case: photorealistic-natural. Asset type: editorial supporting photograph fo
 
 Data examples use native buttons with pressed state and a polite live region. FAQs use native details/summary. The existing reduced-motion handling applies. The contact form can send real email; verification should check navigation and field availability without submitting an enquiry.
 
+
+
+## October 2026 partnership update
+
+The homepage now links to the partnership page through a value-focused section and the shared Data Partnerships navigation item. The page includes a scope/preparation/delivery/payment diagram, source examples, fit and governance guidance, and a browser-only estimator.
+
+Estimator assumptions live in `lib/data-estimator.ts`: employees (20–300) × usable history (1–20 years) × selected categories / 4 × $30–$80. This is an illustrative single-package scenario in USD, explicitly approved for demonstration use; the rates are not market observations, quotes, or guaranteed payouts. Zero selected sources returns zero. Inputs are bounded and nonfinite values handled. No calculator values are transmitted.
