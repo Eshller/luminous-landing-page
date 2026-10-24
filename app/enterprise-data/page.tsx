@@ -44,7 +44,9 @@ const FAQS = [
 
 export default function EnterpriseDataPage() {
   return (
-    <>
+    // A plain wrapper, not a fragment: after client navigation Next.js focuses the page's
+    // first element, which would otherwise be the skip link and reveal it on mouse clicks.
+    <div>
       <a href="#enterprise-main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-paper focus:px-4 focus:py-3">Skip to content</a>
       <SiteHeader />
       <main id="enterprise-main">
@@ -248,6 +250,6 @@ export default function EnterpriseDataPage() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
