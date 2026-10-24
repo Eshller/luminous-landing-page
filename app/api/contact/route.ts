@@ -3,9 +3,9 @@ import nodemailer from "nodemailer";
 
 const FROM_EMAIL = "contact@adzzat.com";
 const CC_EMAILS = [
-  "nabeel@adzzatlabs.com",
-  "aryanhonawar@adzzatlabs.com",
-  "eshu@adzzatlabs.com",
+  "nabeel@adzzat.com",
+  "aryanhonawar@adzzat.com",
+  "eshu@adzzat.com",
 ];
 
 interface ContactBody {
