@@ -89,6 +89,7 @@ export default function EnterpriseDataPage() {
           </Container>
         </section>
 
+        {/* Hidden for now; kept for possible reuse.
         <Section tone="alt" id="why-it-matters">
           <Container>
             <div className="grid items-center gap-12 md:grid-cols-[0.8fr_1fr] md:gap-20">
@@ -116,16 +117,34 @@ export default function EnterpriseDataPage() {
             </div>
           </Container>
         </Section>
+        */}
+
+        <Section id="how-it-works" tone="alt">
+          <Container>
+            <Reveal>
+              <p className="text-xs text-ink/65">02 / A considered path to partnership</p>
+              <div className="mt-5 flex flex-wrap items-end justify-between gap-6">
+                <h2 className="t-h2">How a data partnership works.</h2>
+                <TextLink href="/get-started">Talk to our team</TextLink>
+              </div>
+              <p className="mt-6 max-w-[64ch] text-[15px] leading-[1.75] text-ink/70">From the first conversation to an approved licensing package, establish what can be shared, how it will be prepared, and when payment is due.</p>
+              <PartnershipProcess />
+            </Reveal>
+          </Container>
+        </Section>
 
         <Section id="the-data">
           <Container>
             <Reveal>
               <div className="grid gap-6 md:grid-cols-[1fr_1.3fr] md:gap-16">
-                <div><p className="text-xs text-ink/65">02 / What useful data looks like</p><h2 className="t-h2 mt-5">Real work leaves<br />a valuable record.</h2></div>
-                <p className="max-w-[50ch] self-end text-[15px] leading-[1.75] text-ink/70">
-                  You do not need to manufacture a dataset. Start with the knowledge your
-                  organization already creates. Explore a few examples below.
-                </p>
+                <div><p className="text-xs text-ink/65">03 / What useful data looks like</p><h2 className="t-h2 mt-5">Target industries</h2></div>
+                <div className="self-end">
+                  <p className="max-w-[50ch] text-[15px] leading-[1.75] text-ink/70">
+                    You do not need to manufacture a dataset. Start with the knowledge your
+                    organization already creates. Explore a few examples below.
+                  </p>
+                  <ButtonLink href="/get-started" className="mt-6">Check if you qualify <span aria-hidden="true" className="arrow-nudge">&#8599;</span></ButtonLink>
+                </div>
               </div>
               <DataExplorer />
               <div className="mt-14 border-t border-rule pt-8">
@@ -144,20 +163,7 @@ export default function EnterpriseDataPage() {
           </Container>
         </Section>
 
-        <Section id="how-it-works" tone="alt">
-          <Container>
-            <Reveal>
-              <p className="text-xs text-ink/65">03 / A considered path to partnership</p>
-              <div className="mt-5 flex flex-wrap items-end justify-between gap-6">
-                <h2 className="t-h2">How a data partnership works.</h2>
-                <TextLink href="/get-started">Talk to our team</TextLink>
-              </div>
-              <p className="mt-6 max-w-[64ch] text-[15px] leading-[1.75] text-ink/70">From the first conversation to an approved licensing package, establish what can be shared, how it will be prepared, and when payment is due.</p>
-              <PartnershipProcess />
-            </Reveal>
-          </Container>
-        </Section>
-
+        {/* Hidden for now; kept for possible reuse.
         <Section id="partner-fit">
           <Container>
             <div className="grid gap-8 md:grid-cols-[0.9fr_1.3fr] md:gap-20">
@@ -170,6 +176,7 @@ export default function EnterpriseDataPage() {
             </div>
           </Container>
         </Section>
+        */}
 
         <Section id="partnership-principles" tone="alt">
           <Container>

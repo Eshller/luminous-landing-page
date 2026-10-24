@@ -122,7 +122,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="challenge" className="t-meta">
-          What&rsquo;s your current challenge?
+          What brings you to Adzzat Labs?
         </label>
         <select
           id="challenge"

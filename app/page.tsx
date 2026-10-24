@@ -1,7 +1,7 @@
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/home/Hero";
-import { DataPartnershipBand } from "@/components/home/DataPartnershipBand";
+// import { DataPartnershipBand } from "@/components/home/DataPartnershipBand";
 import { SocialProof } from "@/components/home/SocialProof";
 import { Problem } from "@/components/home/Problem";
 import { Solution } from "@/components/home/Solution";
@@ -47,7 +47,8 @@ export default function Home() {
       <main>
         <Hero />
         <SocialProof />
-        <DataPartnershipBand />
+        {/* Hidden for now; kept for possible reuse. */}
+        {/* <DataPartnershipBand /> */}
         <Problem />
         <Solution />
         <Research />
