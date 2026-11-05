@@ -25,6 +25,49 @@ export interface Role {
 
 export const ROLES: readonly Role[] = [
   {
+    slug: "rl-environment-engineer",
+    title: "RL Environment Engineer",
+    team: "Research",
+    location: "India — Mumbai",
+    type: "Full-time",
+    summary:
+      "Build the environments frontier models learn in. You'll turn real work — codebases, terminals, browsers and tool-driven workflows — into sandboxed tasks with verifiers and reward signals a model can't game, and ship them to AI labs as training environments at scale.",
+    responsibilities: [
+      "Design RL environments end to end: task specification, sandbox, tools, verifier and reward",
+      "Build containerised, reproducible environments for coding, terminal, browser and tool-use agents",
+      "Write verifiers and graders that reward genuine task completion, not shortcuts",
+      "Red-team your own environments — run frontier models against them and close every reward hack you find",
+      "Calibrate difficulty from rollouts so tasks are hard for current models but still solvable",
+      "Build tooling that lets domain experts author, validate and version environments at scale",
+    ],
+    profile:
+      "Strong Python, Docker and Linux, and sound engineering judgment about systems that run untrusted code. You understand how RL post-training consumes an environment — rollouts, rewards, pass rates — even if you haven't trained a model yourself. You're adversarial by instinct: when you write a check, you think first about how a model could pass it without doing the work.",
+    pluses:
+      "Tasks or environments built for SWE-bench, Terminal-Bench, Harbor, Gymnasium, WebArena, BrowserGym, OSWorld or similar. Hands-on with RL training stacks such as verl, TRL, OpenRLHF, SkyRL or Prime Intellect's verifiers. RLVR, reward modelling, or published work on reward hacking and benchmark integrity.",
+  },
+  {
+    slug: "founding-full-stack-ai-engineer-platform-lead",
+    title: "Founding Full-Stack AI Engineer / Platform Lead",
+    team: "Engineering",
+    location: "India — Mumbai preferred",
+    type: "Full-time",
+    summary:
+      "Build the platform behind model failure analysis, benchmarks, human escalation and enterprise AI evaluation. Working directly with the founders, researchers and customers, you'll take an idea like “measure whether an agent knows when to stop and escalate to a human” and turn it into a working product.",
+    responsibilities: [
+      "Build failure-analysis infrastructure: run rollouts at scale, capture trajectories, and tag and compare failure modes across models",
+      "Build the benchmark platform — datasets, rubrics and graders, multi-model runs, regression tracking and human-reviewed ground truth",
+      "Build human-escalation systems that decide when an agent should continue, ask, switch models, seek approval or hand over to a human",
+      "Ship review, approval and adjudication interfaces so every human intervention becomes feedback on where the AI failed",
+      "Connect proprietary, open and customer-hosted models with routing, fallbacks, and latency, cost and reliability tracking",
+      "Let enterprises evaluate AI against their own workflows, policies and expected outcomes",
+      "Set architecture and engineering standards, review code, and help hire and mentor as the team grows",
+    ],
+    profile:
+      "Strong across backend and frontend — some combination of Python, TypeScript/Node.js, FastAPI, PostgreSQL, Redis, queues and background workers, plus React and Next.js for data-heavy dashboards — and comfortable with AWS/GCP, Docker and CI/CD. You understand how modern AI systems work: evaluation, agents and tool use, trajectories, routing, LLM-as-a-judge, RLHF and post-training. You use AI coding tools like Cursor, Claude Code and Codex aggressively, with the judgment to review generated code, spot bad architecture and keep systems secure and reliable. You've built products from zero to one, prefer ownership over tickets, and lead by building.",
+    pluses:
+      "Founding-engineer or founder experience. An AI product shipped to real customers. Evaluation or benchmark infrastructure, agent systems, model gateways, or inference and routing work. Open-source AI contributions, leading a small engineering team, or working directly with founders and researchers.",
+  },
+  {
     slug: "applied-ai-evaluation-research-engineer",
     title: "Applied AI / Evaluation Research Engineer",
     team: "Research",
