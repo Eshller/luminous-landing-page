@@ -150,7 +150,7 @@ export const ROLES: readonly Role[] = [
     pluses:
       "Experience with Neural Architecture Search (NAS), Human-Computer Interaction (HCI), relevant research publications, or meaningful contributions to ML research.",
     compensation:
-      "₹50,000–₹1,00,000 per month + incentives, based on expertise and experience.",
+      "₹50,000–₹1,00,000 for the 3-month engagement + incentives, based on expertise and experience.",
     engagement: "3-month research engagement.",
   },
   {
@@ -174,7 +174,7 @@ export const ROLES: readonly Role[] = [
     pluses:
       "Experience applying cognitive science to brain-inspired ML research, Human-Computer Interaction (HCI), human-AI interaction, or relevant academic publications.",
     compensation:
-      "₹50,000–₹1,00,000 per month + incentives, based on expertise and experience.",
+      "₹50,000–₹1,00,000 for the 3-month engagement + incentives, based on expertise and experience.",
     engagement: "3-month research engagement.",
   },
 ] as const;
