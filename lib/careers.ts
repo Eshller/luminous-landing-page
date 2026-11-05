@@ -2,8 +2,9 @@
  * Open roles, in hiring-priority order.
  *
  * Source of truth for /careers and for the open-role count shown elsewhere.
- * Compensation bands and role-specific assignments are deliberately kept out
- * of the public listing — those go to candidates after they apply.
+ * Full-time compensation bands and role-specific assignments are kept out of
+ * the public listing — those go to candidates after they apply. Contract
+ * engagements may publish their rate and term via `compensation`/`engagement`.
  */
 
 export interface Role {
@@ -18,6 +19,8 @@ export interface Role {
   /** The kind of person we're looking for, written as prose. */
   readonly profile: string;
   readonly pluses: string;
+  readonly compensation?: string;
+  readonly engagement?: string;
 }
 
 export const ROLES: readonly Role[] = [
@@ -125,6 +128,54 @@ export const ROLES: readonly Role[] = [
       "Two-plus years in recruiting, headhunting, talent research, executive search or technical sourcing. Enough technical fluency to tell a genuine evaluation or research engineer from a generic ML profile, exceptional online research skill, and personalised outreach that actually gets replies.",
     pluses:
       "Experience hiring AI/ML, research, developer-tools, infrastructure or frontier-AI talent. A network across IITs, IISc, IIITs, Indian AI startups or research labs. Sourcing from GitHub, research papers, open-source communities or technical competitions.",
+  },
+  {
+    slug: "ml-researcher-model-architecture-training",
+    title: "ML Researcher – Model Architecture & Training",
+    team: "Research",
+    location: "India — Mumbai",
+    type: "Contract · 3 months",
+    summary:
+      "Deep expertise in modern machine learning, model pre-training, fine-tuning, and architecture design. You'll explore how models are trained and structured, investigate architectural improvements, and contribute to advanced ML research.",
+    responsibilities: [
+      "Research and analyze Transformer architectures and their underlying mechanisms",
+      "Work on model pre-training and fine-tuning methodologies",
+      "Explore ML architecture design, optimization, and improvements",
+      "Investigate Neural Architecture Search (NAS) approaches",
+      "Conduct experiments and document technical findings",
+      "Explore connections between ML systems and human-computer interaction where relevant",
+    ],
+    profile:
+      "Strong expertise in machine learning, deep learning, and neural network architectures. You understand the nuances of Transformers, have practical experience with pre-training or fine-tuning, and can independently conduct research and experiments.",
+    pluses:
+      "Experience with Neural Architecture Search (NAS), Human-Computer Interaction (HCI), relevant research publications, or meaningful contributions to ML research.",
+    compensation:
+      "₹50,000–₹1,00,000 per month + incentives, based on expertise and experience.",
+    engagement: "3-month research engagement.",
+  },
+  {
+    slug: "cognitive-theory-ml-researcher",
+    title: "Cognitive Theory-Focused ML Researcher",
+    team: "Research",
+    location: "India — Mumbai",
+    type: "Contract · 3 months",
+    summary:
+      "Explore the intersection of cognitive theory, human reasoning, and machine learning. You'll investigate how humans make decisions, form assumptions, and build mental models of collaborators, with opportunities to apply these insights to brain-inspired ML research.",
+    responsibilities: [
+      "Research cognitive theory and Theory of Mind",
+      "Investigate how humans make decisions and reason under uncertainty",
+      "Study how people form, store, and update assumptions and beliefs",
+      "Explore how humans develop mental models of collaborators and other agents",
+      "Connect cognitive theories with machine learning research",
+      "Develop research insights that can inform brain-inspired ML approaches",
+    ],
+    profile:
+      "Strong expertise in cognitive theory, Theory of Mind, and human reasoning. You understand human decision-making, mental models, and how people interpret the intentions and beliefs of others.",
+    pluses:
+      "Experience applying cognitive science to brain-inspired ML research, Human-Computer Interaction (HCI), human-AI interaction, or relevant academic publications.",
+    compensation:
+      "₹50,000–₹1,00,000 per month + incentives, based on expertise and experience.",
+    engagement: "3-month research engagement.",
   },
 ] as const;
 
