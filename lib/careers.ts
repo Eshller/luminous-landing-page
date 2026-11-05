@@ -2,9 +2,9 @@
  * Open roles, in hiring-priority order.
  *
  * Source of truth for /careers and for the open-role count shown elsewhere.
- * Full-time compensation bands and role-specific assignments are kept out of
- * the public listing — those go to candidates after they apply. Contract
- * engagements may publish their rate and term via `compensation`/`engagement`.
+ * Role-specific assignments are kept out of the public listing — those go to
+ * candidates after they apply. Pay and contract term are published only for
+ * roles that set `compensation`/`engagement`.
  */
 
 export interface Role {
@@ -29,7 +29,7 @@ export const ROLES: readonly Role[] = [
     title: "RL Environment Engineer",
     team: "Research",
     location: "India — Mumbai",
-    type: "Full-time",
+    type: "Contract · 3 months",
     summary:
       "Build the environments frontier models learn in. You'll turn real work — codebases, terminals, browsers and tool-driven workflows — into sandboxed tasks with verifiers and reward signals a model can't game, and ship them to AI labs as training environments at scale.",
     responsibilities: [
@@ -44,6 +44,9 @@ export const ROLES: readonly Role[] = [
       "Strong Python, Docker and Linux, and sound engineering judgment about systems that run untrusted code. You understand how RL post-training consumes an environment — rollouts, rewards, pass rates — even if you haven't trained a model yourself. You're adversarial by instinct: when you write a check, you think first about how a model could pass it without doing the work.",
     pluses:
       "Tasks or environments built for SWE-bench, Terminal-Bench, Harbor, Gymnasium, WebArena, BrowserGym, OSWorld or similar. Hands-on with RL training stacks such as verl, TRL, OpenRLHF, SkyRL or Prime Intellect's verifiers. RLVR, reward modelling, or published work on reward hacking and benchmark integrity.",
+    compensation:
+      "₹50,000–₹1,00,000 for the 3-month engagement + incentives, based on expertise and experience.",
+    engagement: "3-month contract engagement.",
   },
   {
     slug: "founding-full-stack-ai-engineer-platform-lead",
@@ -66,6 +69,7 @@ export const ROLES: readonly Role[] = [
       "Strong across backend and frontend — some combination of Python, TypeScript/Node.js, FastAPI, PostgreSQL, Redis, queues and background workers, plus React and Next.js for data-heavy dashboards — and comfortable with AWS/GCP, Docker and CI/CD. You understand how modern AI systems work: evaluation, agents and tool use, trajectories, routing, LLM-as-a-judge, RLHF and post-training. You use AI coding tools like Cursor, Claude Code and Codex aggressively, with the judgment to review generated code, spot bad architecture and keep systems secure and reliable. You've built products from zero to one, prefer ownership over tickets, and lead by building.",
     pluses:
       "Founding-engineer or founder experience. An AI product shipped to real customers. Evaluation or benchmark infrastructure, agent systems, model gateways, or inference and routing work. Open-source AI contributions, leading a small engineering team, or working directly with founders and researchers.",
+    compensation: "₹8–12 LPA, based on expertise and experience.",
   },
   {
     slug: "applied-ai-evaluation-research-engineer",
