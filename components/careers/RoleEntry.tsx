@@ -52,6 +52,20 @@ export function RoleEntry({ role }: RoleEntryProps) {
         <h3 className="t-eyebrow mt-6">Strong pluses</h3>
         <p className="t-small mt-3 max-w-[62ch]">{role.pluses}</p>
 
+        {role.compensation ? (
+          <>
+            <h3 className="t-eyebrow mt-6">Compensation</h3>
+            <p className="t-small mt-3 max-w-[62ch]">{role.compensation}</p>
+          </>
+        ) : null}
+
+        {role.engagement ? (
+          <>
+            <h3 className="t-eyebrow mt-6">Engagement</h3>
+            <p className="t-small mt-3 max-w-[62ch]">{role.engagement}</p>
+          </>
+        ) : null}
+
         <div className="mt-8">
           <ButtonLink href={applyHref} size="sm" external>
             Apply for this role
